@@ -8,59 +8,56 @@
 
 import UIKit
 
-class ScanTableViewController: UITableViewController {
-    
-    var bkManager = BluetoothKit.sharedManager
-    var startedScan: Bool!
+class ScanTableViewController: UITableViewController, BluetoothHelper {
 
+    var counter = 0
+    var nameUpdate: String!
+    var uuidUpdate: String!
+    var bConv: BluetoothConvenience!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //Start scanning here
-        self.startedScan = bkManager.startScan()
-        
-        
+        bConv = BluetoothConvenience(bhDelegate: self)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return self.bkManager.peripherals.count
+        return counter
     }
-
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
-        
-        //Configure text and subtext
-      /*  cell.textLabel?.text = self.bkManager.peripherals.map($0)
-        cell.detailTextLabel?.text = self.bkManager.peripherals[indexPath.row].0 */
-
-
+        cell.textLabel?.text = nameUpdate
+        cell.detailTextLabel?.text = uuidUpdate
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let ArdUIController = self.storyboard?.instantiateViewController(withIdentifier: "ArdUIController")
-        
-        
-        //if connected, push to ArdUIController
-        
-        
-      //  self.navigationController?.pushViewController(ArdUIController!, animated: true)
+        bConv.connectToDevice(uuid: (tableView.cellForRow(at: indexPath)?.detailTextLabel?.text)!)
+        self.present(ArdUIController!, animated: true, completion: nil)
+        //self.navigationController?.pushViewController(ArdUIController!, animated: true)
     }
     
+    func receiveDevice(name: String, uuid: String) {
+        counter += 1
+        nameUpdate = name
+        uuidUpdate = uuid
+        self.tableView.reloadData()
+    }
+    
+    //TODO popup notification
+    func handleError(error: String) {
+        print(error)
+    }
 
 }

@@ -33,6 +33,7 @@
 		DB05CF031CEEE7E100990DE4 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05CF021CEEE7E100990DE4 /* ComplicationController.swift */; };
 		DB05CF051CEEE7E100990DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB05CF041CEEE7E100990DE4 /* Assets.xcassets */; };
 		DB293EAC1CF9A9C500A18BCF /* BluetoothKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB293EAB1CF9A9C500A18BCF /* BluetoothKit.swift */; };
+		DB9A60771D200607000ED72C /* FoldingTabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDACB681D20029E007B2CCE /* FoldingTabBar.framework */; };
 		DBDACB691D20029E007B2CCE /* FoldingTabBar.framework in Resources */ = {isa = PBXBuildFile; fileRef = DBDACB681D20029E007B2CCE /* FoldingTabBar.framework */; };
 		DBDACB6B1D2002AB007B2CCE /* SAMultisectorControl.framework in Resources */ = {isa = PBXBuildFile; fileRef = DBDACB6A1D2002AB007B2CCE /* SAMultisectorControl.framework */; };
 		E22E9AE01D069CF600DF38BF /* BluetoothConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E9ADF1D069CF600DF38BF /* BluetoothConvenience.swift */; };
@@ -124,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB9A60771D200607000ED72C /* FoldingTabBar.framework in Frameworks */,
 				26A1C1CC1D1C865100A38B1A /* SAMultisectorControl.framework in Frameworks */,
 				26181F931D1C777500EEF69E /* FoldingTabBar.framework in Frameworks */,
 				4D3569FC712B5C2012CCF022 /* Pods.framework in Frameworks */,
@@ -326,8 +328,8 @@
 				TargetAttributes = {
 					DB05CED11CEEE7E100990DE4 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 2W7U8VJ36R;
-						DevelopmentTeamName = "Damir Kozica";
+						DevelopmentTeam = Q5MZT8NG66;
+						DevelopmentTeamName = "Philipp Gabriel (Personal Team)";
 						LastSwiftMigration = 0800;
 					};
 					DB05CEE31CEEE7E100990DE4 = {
@@ -668,6 +670,10 @@
 			baseConfigurationReference = 31EB58443A5CA85D22C32BD9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iOSArduinoControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.htlwels.iOSArduinoControl;
@@ -681,6 +687,10 @@
 			baseConfigurationReference = 86426DBB408EB8457F4CA347 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iOSArduinoControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.htlwels.iOSArduinoControl;

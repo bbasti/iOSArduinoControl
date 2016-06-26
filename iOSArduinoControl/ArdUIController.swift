@@ -14,7 +14,6 @@ class ArdUIController: UIViewController {
     
     @IBOutlet weak var titleForSliders: UILabel!
     var mutableTitle = NSMutableAttributedString()
-
     
     @IBOutlet weak var multisector: SAMultisectorControl!
 
@@ -54,30 +53,25 @@ class ArdUIController: UIViewController {
     
     }
     
-    
     //For sliders
     @IBAction func onValuesChange(_ sender: SAMultisectorControl) {
         for sector in self.multisector.sectors{
             
-            let value: Int = Int(sector.endValue)
+            let value: Int = Int(sector.endValue - sector.startValue)
             
             //If user changes motor speed value, use variable value
             if(sector.tag == 0){
                 //send to BLE device
-
+                print(value)
             }
             
             //If user changes LED light value, use variable value
             if(sector.tag == 1){
                 //send to BLE device
-
+                print(value)
             }
         }
     }
-    
-    
-    //Update UI
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

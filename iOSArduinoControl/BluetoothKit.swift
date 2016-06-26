@@ -16,8 +16,7 @@ class BluetoothKit: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     
     private var manager: CBCentralManager!
     private var peripherals = [String: (CBPeripheral, CBCharacteristic?)]()
-    private var canStartScanning = false
-    
+
     override init() {
         super.init()
         manager = CBCentralManager(delegate: self, queue: nil)
@@ -26,9 +25,10 @@ class BluetoothKit: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
         case .poweredOn:
-            canStartScanning = true
+            manager.scanForPeripherals(withServices: nil, options: nil)
             break
         default:
+            //TODO push error
             break
         }
     }
@@ -66,15 +66,7 @@ class BluetoothKit: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
             brDelegate.bluetoothManager(didReceiveDataFromDevice: string)
         }
     }
-    
-    func startScan() -> Bool {
-        if brDelegate == nil && !canStartScanning {
-            return false
-        }
-        manager.scanForPeripherals(withServices: nil, options: nil)
-        return true
-    }
-    
+
     func stopScan() {
         manager.stopScan()
     }

@@ -20,9 +20,6 @@ class BluetoothConvenience: BluetoothReceiver {
     init(bhDelegate: BluetoothHelper) {
         self.bhDelegate = bhDelegate
         bluetoothKit.brDelegate = self
-        if !bluetoothKit.startScan() {
-            bhDelegate.handleError(error: "Something")
-        }
     }
     
     func bluetoothManager(didReceiveBroadcastForDevice name: String, uuid: String, peripheral: CBPeripheral) {
@@ -35,7 +32,7 @@ class BluetoothConvenience: BluetoothReceiver {
     }
     
     func connectToDevice(uuid: String) {
-        bluetoothKit.startReading(uuid)
+        bluetoothKit.startReading(identifier: uuid)
         activePeripheral = peripherals[uuid]
     }
     
