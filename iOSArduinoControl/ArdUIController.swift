@@ -66,14 +66,11 @@ class ArdUIController: UIViewController {
             
             //If user changes motor speed value, use variable value
             if(sector.tag == 0){
-                //send to BLE device
-                print(value)
             }
             
             //If user changes LED light value, use variable value
             if(sector.tag == 1){
-                //send to BLE device
-                print(value)
+                ScanTableViewController.bConv.updateLED(powerState: true, brightness: value)
             }
         }
     }

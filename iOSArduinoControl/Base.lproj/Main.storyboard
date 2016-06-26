@@ -39,7 +39,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="tvz-C8-Pp9" detailTextLabel="Nc9-IG-zVq" style="IBUITableViewCellStyleSubtitle" id="gST-9W-lkB">
-                                <frame key="frameInset" minY="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gST-9W-lkB" id="fvj-p4-xP3">
                                     <frame key="frameInset" width="375" height="43"/>
