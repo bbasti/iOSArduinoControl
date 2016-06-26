@@ -37,25 +37,27 @@ class BluetoothConvenience: BluetoothReceiver {
         var token: [String]
         
         if dataString.hasPrefix("switch") {
-            switchState = dataString.hasSuffix("on")
-            switchState = !dataString.hasSuffix("off")
-            bhDelegate.updateUI(update: .Switch, value: switchState!)
+            if dataString.hasSuffix("on") { switchState = true }
+            else if dataString.hasSuffix("off") { switchState = false }
+            if switchState == nil { return }
+            bhDelegate.updateUI(update: .Switch(switchState!))
         } else if dataString.hasPrefix("motion") {
-            motionState = dataString.hasSuffix("on")
-            motionState = !dataString.hasSuffix("off")
-            bhDelegate.updateUI(update: .Motion, value: motionState!)
+            if dataString.hasSuffix("on") { motionState = true }
+            else if dataString.hasSuffix("off") { motionState = false }
+            if switchState == nil { return }
+            bhDelegate.updateUI(update: .Motion(motionState!))
         } else if dataString.hasPrefix("poti") {
             token = dataString.components(separatedBy: " ")
             if token.count != 2 { return }
             potiValue = Int(token[1])
             if potiValue == nil { return }
-            bhDelegate.updateUI(update: .Poti, value: potiValue!)
+            bhDelegate.updateUI(update: .Poti(potiValue!))
         } else if dataString.hasPrefix("dist") {
             token = dataString.components(separatedBy: " ")
             if token.count != 2 { return }
             distanceValue = Int(token[1])
             if distanceValue == nil { return }
-            bhDelegate.updateUI(update: .Distance, value: distanceValue!)
+            bhDelegate.updateUI(update: .Distance(distanceValue!))
         }
     }
 
@@ -75,14 +77,14 @@ class BluetoothConvenience: BluetoothReceiver {
 }
 
 enum UpdateInterface {
-    case Switch
-    case Motion
-    case Poti
-    case Distance
+    case Switch(Bool)
+    case Motion(Bool)
+    case Poti(Int)
+    case Distance(Int)
 }
 
 protocol BluetoothHelper {
     func receiveDevice(name: String, uuid: String)
     func handleError(error: String)
-    func updateUI(update: UpdateInterface, value: AnyObject)
+    func updateUI(update: UpdateInterface)
 }

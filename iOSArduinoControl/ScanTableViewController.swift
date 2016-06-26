@@ -14,6 +14,7 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
     var nameUpdate: String!
     var uuidUpdate: String!
     static var bConv: BluetoothConvenience!
+    static var ardControl: ArdUIController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,10 +42,11 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
         return cell
     }
     
+    var ardUIController: UIViewController!
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let ArdUIController = self.storyboard?.instantiateViewController(withIdentifier: "ArdUIController")
+        ardUIController = self.storyboard?.instantiateViewController(withIdentifier: "ArdUIController")
         ScanTableViewController.bConv.connectToDevice(uuid: (tableView.cellForRow(at: indexPath)?.detailTextLabel?.text)!)
-        self.present(ArdUIController!, animated: true, completion: nil)
+        self.present(ardUIController!, animated: true, completion: nil)
         //self.navigationController?.pushViewController(ArdUIController!, animated: true)
     }
     
@@ -60,8 +62,8 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
         print(error)
     }
     
-    func updateUI(update: UpdateInterface, value: AnyObject) {
-        print("\(update): \(value)")
+    func updateUI(update: UpdateInterface) {
+        ScanTableViewController.ardControl.updateUI(update: update)
     }
 
 }

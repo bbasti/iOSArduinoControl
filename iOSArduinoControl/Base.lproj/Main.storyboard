@@ -145,7 +145,7 @@
         <!--Item 1-->
         <scene sceneID="Wpa-gB-Efh">
             <objects>
-                <viewController id="9Xe-05-GQA" customClass="ArdUIController" customModule="iOSArduinoControl" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArdUIControllerView" id="9Xe-05-GQA" customClass="ArdUIController" customModule="iOSArduinoControl" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GjX-fJ-Sye"/>
                         <viewControllerLayoutGuide type="bottom" id="cgJ-Vr-QAS"/>
@@ -209,9 +209,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1116" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYw-UP-QEw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYw-UP-QEw">
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.21960784310000001" green="0.80392156859999997" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -264,8 +264,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="LrG-3G-2WO" customClass="YAL"/>
                     <connections>
-                        <outlet property="buttonState" destination="mxq-eS-g3x" id="dW4-IP-4tO"/>
-                        <outlet property="distanceVal" destination="jLS-KS-jbV" id="cT4-LX-0hK"/>
+                        <outlet property="buttonState" destination="mxq-eS-g3x" id="Gmm-KX-RVD"/>
+                        <outlet property="distanceVal" destination="jLS-KS-jbV" id="PbY-s0-19m"/>
                         <outlet property="motionSensorVal" destination="JYw-UP-QEw" id="g2u-kG-8yG"/>
                         <outlet property="multisector" destination="THY-hT-tWW" id="iVN-1r-Lhp"/>
                         <outlet property="pmVal" destination="TJq-B6-4Px" id="PTY-R1-sLH"/>
