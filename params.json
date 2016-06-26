@@ -1,6 +1,6 @@
 {
   "name": "iOSArduinoControl",
   "tagline": "",
-  "body": "### About\r\nThis is a school project for controlling an Arduino via Bluetooth on the iPhone or iPad.\r\n\r\n### Contributors\r\n* Damir: UI on the iDevice (iPhone,iPad)\r\n* Christoph: UI on the Apple Watch + Communication with Damir's UI\r\n* Basti: Convenience layer between Philipp's Bluetooth API and UI\r\n* * Write to motor (0...180)\r\n* * Turn LED on or off\r\n* * Read distance value (-1...4500)\r\n* * Read button state\r\n* * Read motion sensor\r\n* * Read potentiometer value (0...1023)\r\n* Philipp: Backend Bluetooth Communication\r\n* * Start scan\r\n* * Stop scan\r\n* * Connect\r\n* * Read\r\n* * Write",
+  "body": "### About\r\nThis is a school project for controlling an Arduino via Bluetooth on the iPhone or iPad.\r\n\r\n### Contributors\r\n* Damir: UI on the iDevice (iPhone,iPad)\r\n* Christoph: UI on the Apple Watch + Communication with Damir's UI\r\n* Basti: Convenience layer between Philipp's Bluetooth API and UI\r\n* Philipp: Backend Bluetooth Communication",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
