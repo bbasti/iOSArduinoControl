@@ -65,8 +65,7 @@ class BluetoothConvenience: BluetoothReceiver {
     }
     
     func updateLED(powerState: Bool, brightness: Int) {
-        var onOrOff = "on"
-        if !powerState { onOrOff = "off" }
+        var onOrOff = powerState ? "on" : "off"
         bluetoothKit.write(data: "led \(onOrOff) 1", uuid: activePeripheral.identifier.uuidString)
         bluetoothKit.write(data: "pwm \(brightness)", uuid: activePeripheral.identifier.uuidString)
     }
