@@ -1,0 +1,13 @@
+PODS:
+  - FoldingTabBar (1.0.4)
+  - SAMultisectorControl (1.0.1)
+
+DEPENDENCIES:
+  - FoldingTabBar (~> 1.0.3)
+  - SAMultisectorControl
+
+SPEC CHECKSUMS:
+  FoldingTabBar: 0b099ae881bb5e009eb5f893aba2d6d8d8a066a2
+  SAMultisectorControl: bbd3a91c4322599d1ec986d2b169ff87f47e8a9f
+
+COCOAPODS: 0.39.0
