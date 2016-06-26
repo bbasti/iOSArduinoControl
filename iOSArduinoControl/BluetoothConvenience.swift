@@ -44,7 +44,7 @@ class BluetoothConvenience: BluetoothReceiver {
         } else if dataString.hasPrefix("motion") {
             if dataString.hasSuffix("on") { motionState = true }
             else if dataString.hasSuffix("off") { motionState = false }
-            if switchState == nil { return }
+            if motionState == nil { return }
             bhDelegate.updateUI(update: .Motion(motionState!))
         } else if dataString.hasPrefix("poti") {
             token = dataString.components(separatedBy: " ")

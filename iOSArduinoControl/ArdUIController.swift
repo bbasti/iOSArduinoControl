@@ -33,7 +33,6 @@ class ArdUIController: UIViewController {
         ScanTableViewController.ardControl = self
         
         //Setting up title and sliders
-        //Tsitle
         mutableTitle = NSMutableAttributedString(string: "Adjust motor speed and LED light", attributes: [NSFontAttributeName:UIFont(name: "Apple SD Gothic Neo", size: 20.0)!])
         mutableTitle.addAttribute(NSForegroundColorAttributeName, value: blueColor, range: NSRange(location:7,length:11))
         mutableTitle.addAttribute(NSForegroundColorAttributeName, value: greenColor, range: NSRange(location:23,length:9))
@@ -77,7 +76,6 @@ class ArdUIController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func updateUI(update: UpdateInterface) {
@@ -88,7 +86,7 @@ class ArdUIController: UIViewController {
         case .Motion(let bool):
             let color = (bool) ? lighGreenColor : lighRedColor
             let string = (bool) ? "ON" : "OFF"
-            motionSensorVal.tintColor = color
+            motionSensorVal.textColor = color
             motionSensorVal.text = string
             break
         case .Poti(let number):
