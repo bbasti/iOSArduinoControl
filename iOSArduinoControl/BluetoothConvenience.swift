@@ -20,19 +20,32 @@ class BluetoothConvenience: BluetoothReceiver {
     init(bhDelegate: BluetoothHelper) {
         self.bhDelegate = bhDelegate
         bluetoothKit.brDelegate = self
+        if !bluetoothKit.startScan() {
+            bhDelegate.handleError(error: "Something")
+        }
     }
-    
-    //Store all those CBPeripherals somewhere in a list and call the connect(peripheral) when someone clicked on it in a ListView
     
     func bluetoothManager(didReceiveBroadcastForDevice name: String, uuid: String, peripheral: CBPeripheral) {
         peripherals[uuid] = peripheral
-        bhDelegate.receiveDevice(name, uuid: uuid)
+        bhDelegate.receiveDevice(name: name, uuid: uuid)
     }
     
-    func bluetoothManager(didReceiveDataFromDevice data: String){}
+    func bluetoothManager(didReceiveDataFromDevice data: String){
+        //Interpret every command sent from device here and push update to UI (list of commands in readme), if its unknown discard it
+    }
     
+    func connectToDevice(uuid: String) {
+        bluetoothKit.startReading(uuid)
+        activePeripheral = peripherals[uuid]
+    }
+    
+    func updateLED(powerState: Bool, brightness: Int) {}
+    func servoMotor(degrees: Int) {}
+    func stepMotor(turns: Int, speed: Int) {}
 }
 
 protocol BluetoothHelper {
-    func receiveDevice(_ name: String, uuid: String)
+    func receiveDevice(name: String, uuid: String)
+    func handleError(error: String)
+    //Function for updating UI elements
 }

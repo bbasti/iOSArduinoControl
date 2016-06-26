@@ -1,0 +1,6 @@
+framework module SAMultisectorControl {
+  umbrella header "SAMultisectorControl-umbrella.h"
+
+  export *
+  module * { export * }
+}

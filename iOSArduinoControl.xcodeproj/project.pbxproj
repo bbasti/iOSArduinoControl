@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		26181F931D1C777500EEF69E /* FoldingTabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26181F921D1C777400EEF69E /* FoldingTabBar.framework */; };
-		26181F941D1C778300EEF69E /* FoldingTabBar.framework in Resources */ = {isa = PBXBuildFile; fileRef = 26181F921D1C777400EEF69E /* FoldingTabBar.framework */; };
 		26181F961D1C7C3400EEF69E /* plus_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26181F951D1C7C3400EEF69E /* plus_icon@2x.png */; };
 		26181FA11D1C7DB200EEF69E /* Keyboard-50w@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26181F9F1D1C7DB200EEF69E /* Keyboard-50w@2x.png */; };
 		26181FA21D1C7DB200EEF69E /* Rocket-50w@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26181FA01D1C7DB200EEF69E /* Rocket-50w@2x.png */; };
@@ -16,7 +15,6 @@
 		262988A81D1FCE6F00478DDA /* ScanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262988A71D1FCE6F00478DDA /* ScanTableViewController.swift */; };
 		266263AD1D1A9F5700B4E99F /* ArdControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 266263AC1D1A9F5700B4E99F /* ArdControlView.xib */; };
 		26A1C1CC1D1C865100A38B1A /* SAMultisectorControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A1C1CB1D1C865100A38B1A /* SAMultisectorControl.framework */; };
-		26A1C1CD1D1C865700A38B1A /* SAMultisectorControl.framework in Resources */ = {isa = PBXBuildFile; fileRef = 26A1C1CB1D1C865100A38B1A /* SAMultisectorControl.framework */; };
 		26A1C1CF1D1C86CE00A38B1A /* ArdUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A1C1CE1D1C86CE00A38B1A /* ArdUIController.swift */; };
 		4D3569FC712B5C2012CCF022 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E396475E560083CEC315F3 /* Pods.framework */; };
 		DB05CED61CEEE7E100990DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05CED51CEEE7E100990DE4 /* AppDelegate.swift */; };
@@ -35,6 +33,8 @@
 		DB05CF031CEEE7E100990DE4 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05CF021CEEE7E100990DE4 /* ComplicationController.swift */; };
 		DB05CF051CEEE7E100990DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB05CF041CEEE7E100990DE4 /* Assets.xcassets */; };
 		DB293EAC1CF9A9C500A18BCF /* BluetoothKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB293EAB1CF9A9C500A18BCF /* BluetoothKit.swift */; };
+		DBDACB691D20029E007B2CCE /* FoldingTabBar.framework in Resources */ = {isa = PBXBuildFile; fileRef = DBDACB681D20029E007B2CCE /* FoldingTabBar.framework */; };
+		DBDACB6B1D2002AB007B2CCE /* SAMultisectorControl.framework in Resources */ = {isa = PBXBuildFile; fileRef = DBDACB6A1D2002AB007B2CCE /* SAMultisectorControl.framework */; };
 		E22E9AE01D069CF600DF38BF /* BluetoothConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E9ADF1D069CF600DF38BF /* BluetoothConvenience.swift */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +114,8 @@
 		DB05CF041CEEE7E100990DE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB05CF061CEEE7E100990DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB293EAB1CF9A9C500A18BCF /* BluetoothKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothKit.swift; sourceTree = "<group>"; };
+		DBDACB681D20029E007B2CCE /* FoldingTabBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FoldingTabBar.framework; sourceTree = "<group>"; };
+		DBDACB6A1D2002AB007B2CCE /* SAMultisectorControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAMultisectorControl.framework; sourceTree = "<group>"; };
 		E22E9ADF1D069CF600DF38BF /* BluetoothConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothConvenience.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +171,8 @@
 		DB05CEC91CEEE7E000990DE4 = {
 			isa = PBXGroup;
 			children = (
+				DBDACB6A1D2002AB007B2CCE /* SAMultisectorControl.framework */,
+				DBDACB681D20029E007B2CCE /* FoldingTabBar.framework */,
 				DB05CED41CEEE7E100990DE4 /* iOSArduinoControl */,
 				26181F8C1D1C754000EEF69E /* images */,
 				DB05CEE81CEEE7E100990DE4 /* iOSArduinoControl WatchKit App */,
@@ -362,8 +366,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26A1C1CD1D1C865700A38B1A /* SAMultisectorControl.framework in Resources */,
-				26181F941D1C778300EEF69E /* FoldingTabBar.framework in Resources */,
+				DBDACB6B1D2002AB007B2CCE /* SAMultisectorControl.framework in Resources */,
+				DBDACB691D20029E007B2CCE /* FoldingTabBar.framework in Resources */,
 				26181F961D1C7C3400EEF69E /* plus_icon@2x.png in Resources */,
 				DB05CEE01CEEE7E100990DE4 /* LaunchScreen.storyboard in Resources */,
 				DB05CEDD1CEEE7E100990DE4 /* Assets.xcassets in Resources */,

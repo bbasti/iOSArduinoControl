@@ -8,24 +8,29 @@
 
 import CoreBluetooth
 
-//TODO implement error handling (didWrite shit)
+//TODO implement better error handling
 class BluetoothKit: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     
     static let sharedManager = BluetoothKit()
     var brDelegate: BluetoothReceiver!
     
     private var manager: CBCentralManager!
-    private var dataString = String()
-    var peripherals = [String: (CBPeripheral, CBCharacteristic?)]()
+    private var peripherals = [String: (CBPeripheral, CBCharacteristic?)]()
+    private var canStartScanning = false
     
     override init() {
         super.init()
         manager = CBCentralManager(delegate: self, queue: nil)
     }
     
-    //TODO only start scanning when state changed to good one
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
-        manager.scanForPeripherals(withServices: nil, options: nil)
+        switch central.state {
+        case .poweredOn:
+            canStartScanning = true
+            break
+        default:
+            break
+        }
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : AnyObject], rssi RSSI: NSNumber) {
@@ -54,14 +59,16 @@ class BluetoothKit: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         }
     }
     
-    //TODO sometimes a block has more than 6 lines (especially at the beginning)
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: NSError?) {
-        dataString += String(data: characteristic.value!, encoding: String.Encoding.utf8)!.replacingOccurrences(of: "\n", with: "")
-        brDelegate.bluetoothManager(didReceiveDataFromDevice: dataString)
+        let strings = String(data: characteristic.value!, encoding: String.Encoding.utf8)!.components(separatedBy: "\r\n")
+        for string in strings {
+            if string.characters.count <= 1 { continue }
+            brDelegate.bluetoothManager(didReceiveDataFromDevice: string)
+        }
     }
     
     func startScan() -> Bool {
-        if brDelegate == nil {
+        if brDelegate == nil && !canStartScanning {
             return false
         }
         manager.scanForPeripherals(withServices: nil, options: nil)
@@ -72,13 +79,12 @@ class BluetoothKit: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         manager.stopScan()
     }
     
-    //TODO wait until connection finished
-    func startReading(_ identifier: String) {
+    func startReading(identifier: String) {
         manager.connect((peripherals[identifier]?.0)!, options: nil)
         manager.stopScan()
     }
     
-    func write(_ data: String, uuid: String) {
+    func write(data: String, uuid: String) {
         peripherals[uuid]?.0.writeValue((data + "\r\n").data(using: String.Encoding.utf8)!, for: (peripherals[uuid]?.1)!, type: .withoutResponse)
     }
     
