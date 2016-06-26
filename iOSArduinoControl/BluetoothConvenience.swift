@@ -27,26 +27,26 @@ class BluetoothConvenience: BluetoothReceiver {
         bhDelegate.receiveDevice(name: name, uuid: uuid)
     }
     
+    var potiValue: Int
+    var distanceValue: Int
+    var switchState: Bool
+    var motionState: Bool
+    
     func bluetoothManager(didReceiveDataFromDevice data: String){
-        //Interpret every command sent from device here and push update to UI (list of commands in readme), if its unknown discard it
+        var token: [String]
+        
         if(data.hasPrefix("switch")){
-            if(data.hasSuffix("on")){
-                
-            }else if(data.hasSuffix("off")){
-                
-            }
+            switchState = data.hasSuffix("on")
+            switchState = !data.hasSuffix("off")
         } else if(data.hasPrefix("motion")){
-            if(data.hasSuffix("on")){
-                
-            }else if(data.hasSuffix("off")){
-                
-            }
+            motionState = data.hasSuffix("on")
+            motionState = !data.hasSuffix("off")
         } else if(data.hasPrefix("poti")){
-            var token = data.componentsSeparatedByString(" ")
-            var potiValue = Int(token[1])
+            token = data.componentsSeparatedByString(" ")
+            potiValue = Int(token[1])!
         } else if(data.hasPrefix("dist")){
-            var token = data.componentsSeparatedByString(" ")
-            var distanceValue = Int(token[1])
+            token = data.componentsSeparatedByString(" ")
+            distanceValue = Int(token[1])!
         }
     }
     
