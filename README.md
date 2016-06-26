@@ -22,6 +22,13 @@ School project for an Arduino which is going to be controlled via Bluetooth on t
 
 HomeKit implementation!!! (ex. Siri turn on the motor)
 
+### Results
+
+switch on|off
+motion on|off
+poti 0..1023
+dist -1..4500
+
 ### Source control
 
 Either use source control which is directly built into XCode or use the Github.app for committing. You could also use the scripts which were kindly provided by Christoph.
