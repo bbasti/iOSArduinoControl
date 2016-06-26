@@ -60,20 +60,25 @@ class BluetoothConvenience: BluetoothReceiver {
             bhDelegate.updateUI(update: .Distance(distanceValue!))
         }
     }
-
+    
     func connectToDevice(uuid: String) {
         bluetoothKit.startReading(identifier: uuid)
         activePeripheral = peripherals[uuid]
     }
     
     func updateLED(powerState: Bool, brightness: Int) {
-        var onOrOff = "on"
-        if !powerState { onOrOff = "off" }
+        let onOrOff = powerState ? "on" : "off"
         bluetoothKit.write(data: "led \(onOrOff) 1", uuid: activePeripheral.identifier.uuidString)
         bluetoothKit.write(data: "pwm \(brightness)", uuid: activePeripheral.identifier.uuidString)
     }
-    func servoMotor(degrees: Int) {}
-    func stepMotor(turns: Int, speed: Int) {}
+    
+    func servoMotor(degrees: Int) {
+        bluetoothKit.write(data: "servo \(degrees)", uuid: activePeripheral.identifier.uuidString)
+    }
+    
+    func stepMotor(turns: Int, speed: Int) {
+        bluetoothKit.write(data: "step \(turns) \(speed)", uuid: activePeripheral.identifier.uuidString)
+    }
 }
 
 enum UpdateInterface {

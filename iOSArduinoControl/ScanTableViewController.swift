@@ -9,7 +9,7 @@
 import UIKit
 
 class ScanTableViewController: UITableViewController, BluetoothHelper {
-
+    
     var counter = 0
     var nameUpdate: String!
     var uuidUpdate: String!
@@ -20,21 +20,21 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
         super.viewDidLoad()
         ScanTableViewController.bConv = BluetoothConvenience(bhDelegate: self)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return counter
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = nameUpdate
@@ -65,5 +65,5 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
     func updateUI(update: UpdateInterface) {
         ScanTableViewController.ardControl.updateUI(update: update)
     }
-
+    
 }

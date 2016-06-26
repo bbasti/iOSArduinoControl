@@ -17,6 +17,7 @@
 		26A1C1CC1D1C865100A38B1A /* SAMultisectorControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A1C1CB1D1C865100A38B1A /* SAMultisectorControl.framework */; };
 		26A1C1CF1D1C86CE00A38B1A /* ArdUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A1C1CE1D1C86CE00A38B1A /* ArdUIController.swift */; };
 		4D3569FC712B5C2012CCF022 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E396475E560083CEC315F3 /* Pods.framework */; };
+		5999340A1D204C78006CF64E /* ScanRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599934091D204C78006CF64E /* ScanRow.swift */; };
 		DB05CED61CEEE7E100990DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05CED51CEEE7E100990DE4 /* AppDelegate.swift */; };
 		DB05CED81CEEE7E100990DE4 /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05CED71CEEE7E100990DE4 /* CustomTabBarViewController.swift */; };
 		DB05CEDB1CEEE7E100990DE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB05CED91CEEE7E100990DE4 /* Main.storyboard */; };
@@ -26,7 +27,7 @@
 		DB05CEEB1CEEE7E100990DE4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB05CEE91CEEE7E100990DE4 /* Interface.storyboard */; };
 		DB05CEED1CEEE7E100990DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB05CEEC1CEEE7E100990DE4 /* Assets.xcassets */; };
 		DB05CEF41CEEE7E100990DE4 /* iOSArduinoControl WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DB05CEF31CEEE7E100990DE4 /* iOSArduinoControl WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		DB05CEFB1CEEE7E100990DE4 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05CEFA1CEEE7E100990DE4 /* InterfaceController.swift */; };
+		DB05CEFB1CEEE7E100990DE4 /* ScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05CEFA1CEEE7E100990DE4 /* ScanController.swift */; };
 		DB05CEFD1CEEE7E100990DE4 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05CEFC1CEEE7E100990DE4 /* ExtensionDelegate.swift */; };
 		DB05CEFF1CEEE7E100990DE4 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05CEFE1CEEE7E100990DE4 /* NotificationController.swift */; };
 		DB05CF011CEEE7E100990DE4 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05CF001CEEE7E100990DE4 /* GlanceController.swift */; };
@@ -93,6 +94,7 @@
 		26A1C1CE1D1C86CE00A38B1A /* ArdUIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArdUIController.swift; sourceTree = "<group>"; };
 		31EB58443A5CA85D22C32BD9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		40E396475E560083CEC315F3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		599934091D204C78006CF64E /* ScanRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanRow.swift; sourceTree = "<group>"; };
 		86426DBB408EB8457F4CA347 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DB05CED21CEEE7E100990DE4 /* iOSArduinoControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSArduinoControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB05CED51CEEE7E100990DE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,7 +109,7 @@
 		DB05CEEE1CEEE7E100990DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB05CEF31CEEE7E100990DE4 /* iOSArduinoControl WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iOSArduinoControl WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB05CEF91CEEE7E100990DE4 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		DB05CEFA1CEEE7E100990DE4 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		DB05CEFA1CEEE7E100990DE4 /* ScanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanController.swift; sourceTree = "<group>"; };
 		DB05CEFC1CEEE7E100990DE4 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		DB05CEFE1CEEE7E100990DE4 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		DB05CF001CEEE7E100990DE4 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
@@ -227,7 +229,8 @@
 		DB05CEF71CEEE7E100990DE4 /* iOSArduinoControl WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				DB05CEFA1CEEE7E100990DE4 /* InterfaceController.swift */,
+				DB05CEFA1CEEE7E100990DE4 /* ScanController.swift */,
+				599934091D204C78006CF64E /* ScanRow.swift */,
 				DB05CEFC1CEEE7E100990DE4 /* ExtensionDelegate.swift */,
 				DB05CEFE1CEEE7E100990DE4 /* NotificationController.swift */,
 				DB05CF001CEEE7E100990DE4 /* GlanceController.swift */,
@@ -467,9 +470,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB05CEFF1CEEE7E100990DE4 /* NotificationController.swift in Sources */,
+				5999340A1D204C78006CF64E /* ScanRow.swift in Sources */,
 				DB05CEFD1CEEE7E100990DE4 /* ExtensionDelegate.swift in Sources */,
 				DB05CF031CEEE7E100990DE4 /* ComplicationController.swift in Sources */,
-				DB05CEFB1CEEE7E100990DE4 /* InterfaceController.swift in Sources */,
+				DB05CEFB1CEEE7E100990DE4 /* ScanController.swift in Sources */,
 				DB05CF011CEEE7E100990DE4 /* GlanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
