@@ -24,10 +24,13 @@ HomeKit implementation!!! (ex. Siri turn on the motor)
 
 ### Results
 
-*switch on|off
-*motion on|off
-*poti 0..1023
-*dist -1..4500
+switch on|off
+
+motion on|off
+
+poti 0..1023
+
+dist -1..4500
 
 ### Source control
 
