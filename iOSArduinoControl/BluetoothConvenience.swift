@@ -27,28 +27,6 @@ class BluetoothConvenience: BluetoothReceiver {
         bhDelegate.receiveDevice(name: name, uuid: uuid)
     }
     
-<<<<<<< HEAD
-    var potiValue: Int
-    var distanceValue: Int
-    var switchState: Bool
-    var motionState: Bool
-    
-    func bluetoothManager(didReceiveDataFromDevice data: String){
-        var token: [String]
-        
-        if(data.hasPrefix("switch")){
-            switchState = data.hasSuffix("on")
-            switchState = !data.hasSuffix("off")
-        } else if(data.hasPrefix("motion")){
-            motionState = data.hasSuffix("on")
-            motionState = !data.hasSuffix("off")
-        } else if(data.hasPrefix("poti")){
-            token = data.componentsSeparatedByString(" ")
-            potiValue = Int(token[1])!
-        } else if(data.hasPrefix("dist")){
-            token = data.componentsSeparatedByString(" ")
-            distanceValue = Int(token[1])!
-=======
     func bluetoothManager(didReceiveDataFromDevice data: String) {
         var potiValue: Int?
         var distanceValue: Int?
@@ -78,22 +56,33 @@ class BluetoothConvenience: BluetoothReceiver {
             distanceValue = Int(token[1])
             if distanceValue == nil { return }
             bhDelegate.updateUI(update: .Distance, value: distanceValue!)
->>>>>>> origin/master
         }
     }
-
+    
     func connectToDevice(uuid: String) {
         bluetoothKit.startReading(identifier: uuid)
         activePeripheral = peripherals[uuid]
     }
     
-    func updateLED(powerState: Bool, brightness: Int) {}
+    func updateLED(powerState: Bool, brightness: Int) {
+        var onOrOff = "on"
+        if !powerState { onOrOff = "off" }
+        bluetoothKit.write(data: "led \(onOrOff) 1", uuid: activePeripheral.identifier.uuidString)
+        bluetoothKit.write(data: "pwm \(brightness)", uuid: activePeripheral.identifier.uuidString)
+    }
     func servoMotor(degrees: Int) {}
     func stepMotor(turns: Int, speed: Int) {}
+}
+
+enum UpdateInterface {
+    case Switch
+    case Motion
+    case Poti
+    case Distance
 }
 
 protocol BluetoothHelper {
     func receiveDevice(name: String, uuid: String)
     func handleError(error: String)
-    //Function for updating UI elements
+    func updateUI(update: UpdateInterface, value: AnyObject)
 }
