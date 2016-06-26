@@ -59,5 +59,12 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
     func handleError(error: String) {
         print(error)
     }
+<<<<<<< HEAD
+=======
+    
+    func updateUI(update: UpdateInterface, value: AnyObject) {
+        print("\(update): \(value)")
+    }
+>>>>>>> origin/master
 
 }

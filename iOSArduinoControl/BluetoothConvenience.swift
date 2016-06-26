@@ -27,6 +27,7 @@ class BluetoothConvenience: BluetoothReceiver {
         bhDelegate.receiveDevice(name: name, uuid: uuid)
     }
     
+<<<<<<< HEAD
     var potiValue: Int
     var distanceValue: Int
     var switchState: Bool
@@ -47,9 +48,40 @@ class BluetoothConvenience: BluetoothReceiver {
         } else if(data.hasPrefix("dist")){
             token = data.componentsSeparatedByString(" ")
             distanceValue = Int(token[1])!
+=======
+    func bluetoothManager(didReceiveDataFromDevice data: String) {
+        var potiValue: Int?
+        var distanceValue: Int?
+        var switchState: Bool?
+        var motionState: Bool?
+        
+        let dataString = data.replacingOccurrences(of: "\r", with: "")
+        var token: [String]
+        
+        if dataString.hasPrefix("switch") {
+            switchState = dataString.hasSuffix("on")
+            switchState = !dataString.hasSuffix("off")
+            bhDelegate.updateUI(update: .Switch, value: switchState!)
+        } else if dataString.hasPrefix("motion") {
+            motionState = dataString.hasSuffix("on")
+            motionState = !dataString.hasSuffix("off")
+            bhDelegate.updateUI(update: .Motion, value: motionState!)
+        } else if dataString.hasPrefix("poti") {
+            token = dataString.components(separatedBy: " ")
+            if token.count != 2 { return }
+            potiValue = Int(token[1])
+            if potiValue == nil { return }
+            bhDelegate.updateUI(update: .Poti, value: potiValue!)
+        } else if dataString.hasPrefix("dist") {
+            token = dataString.components(separatedBy: " ")
+            if token.count != 2 { return }
+            distanceValue = Int(token[1])
+            if distanceValue == nil { return }
+            bhDelegate.updateUI(update: .Distance, value: distanceValue!)
+>>>>>>> origin/master
         }
     }
-    
+
     func connectToDevice(uuid: String) {
         bluetoothKit.startReading(identifier: uuid)
         activePeripheral = peripherals[uuid]
