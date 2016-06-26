@@ -58,36 +58,7 @@ class BluetoothConvenience: BluetoothReceiver {
             bhDelegate.updateUI(update: .Distance, value: distanceValue!)
         }
     }
-    
-    /*func bluetoothManager(didReceiveDataFromDevice data: String){
-        let dataString = data.replacingOccurrences(of: "\r", with: "")
-        if dataString.hasPrefix("switch"){
-            if(dataString.hasSuffix("on")){
-                bhDelegate.updateUI(update: .Switch, value: true)
-            } else if dataString.hasSuffix("off") {
-                bhDelegate.updateUI(update: .Switch, value: false)
-            }
-        } else if dataString.hasPrefix("motion"){
-            if dataString.hasSuffix("on") {
-                bhDelegate.updateUI(update: .Motion, value: true)
-            } else if dataString.hasSuffix("off") {
-                bhDelegate.updateUI(update: .Motion, value: false)
-            }
-        } else if dataString.hasPrefix("poti") {
-            var token = dataString.components(separatedBy: " ")
-            if token.count != 2 { return }
-            let potiValue = Int(token[1])
-            if potiValue == nil { return }
-            bhDelegate.updateUI(update: .Poti, value: potiValue!)
-        } else if dataString.hasPrefix("dist") {
-            var token = dataString.components(separatedBy: " ")
-            if token.count != 2 { return }
-            let distanceValue = Int(token[1])
-            if distanceValue == nil { return }
-            bhDelegate.updateUI(update: .Distance, value: distanceValue!)
-        }
-    }*/
-    
+
     func connectToDevice(uuid: String) {
         bluetoothKit.startReading(identifier: uuid)
         activePeripheral = peripherals[uuid]
