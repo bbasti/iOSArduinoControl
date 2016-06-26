@@ -13,11 +13,11 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
     var counter = 0
     var nameUpdate: String!
     var uuidUpdate: String!
-    var bConv: BluetoothConvenience!
+    static var bConv: BluetoothConvenience!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bConv = BluetoothConvenience(bhDelegate: self)
+        ScanTableViewController.bConv = BluetoothConvenience(bhDelegate: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +43,7 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let ArdUIController = self.storyboard?.instantiateViewController(withIdentifier: "ArdUIController")
-        bConv.connectToDevice(uuid: (tableView.cellForRow(at: indexPath)?.detailTextLabel?.text)!)
+        ScanTableViewController.bConv.connectToDevice(uuid: (tableView.cellForRow(at: indexPath)?.detailTextLabel?.text)!)
         self.present(ArdUIController!, animated: true, completion: nil)
         //self.navigationController?.pushViewController(ArdUIController!, animated: true)
     }
@@ -58,6 +58,10 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
     //TODO popup notification
     func handleError(error: String) {
         print(error)
+    }
+    
+    func updateUI(update: UpdateInterface, value: AnyObject) {
+        //TODO implement
     }
 
 }
