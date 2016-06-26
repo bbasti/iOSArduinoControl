@@ -27,8 +27,39 @@ class BluetoothConvenience: BluetoothReceiver {
         bhDelegate.receiveDevice(name: name, uuid: uuid)
     }
     
-    func bluetoothManager(didReceiveDataFromDevice data: String){
-        //Interpret every command sent from device here and push update to UI (list of commands in readme), if its unknown discard it
+    func bluetoothManager(didReceiveDataFromDevice data: String) {
+        var potiValue: Int?
+        var distanceValue: Int?
+        var switchState: Bool?
+        var motionState: Bool?
+        
+        let dataString = data.replacingOccurrences(of: "\r", with: "")
+        var token: [String]
+        
+        if dataString.hasPrefix("switch") {
+            switchState = dataString.hasSuffix("on")
+            switchState = !dataString.hasSuffix("off")
+            bhDelegate.updateUI(update: .Switch, value: switchState!)
+        } else if dataString.hasPrefix("motion") {
+            motionState = dataString.hasSuffix("on")
+            motionState = !dataString.hasSuffix("off")
+            bhDelegate.updateUI(update: .Motion, value: motionState!)
+        } else if dataString.hasPrefix("poti") {
+            token = dataString.components(separatedBy: " ")
+            if token.count != 2 { return }
+            potiValue = Int(token[1])
+            if potiValue == nil { return }
+            bhDelegate.updateUI(update: .Poti, value: potiValue!)
+        } else if dataString.hasPrefix("dist") {
+            token = dataString.components(separatedBy: " ")
+            if token.count != 2 { return }
+            distanceValue = Int(token[1])
+            if distanceValue == nil { return }
+            bhDelegate.updateUI(update: .Distance, value: distanceValue!)
+        }
+    }
+    
+    /*func bluetoothManager(didReceiveDataFromDevice data: String){
         let dataString = data.replacingOccurrences(of: "\r", with: "")
         if dataString.hasPrefix("switch"){
             if(dataString.hasSuffix("on")){
@@ -55,7 +86,7 @@ class BluetoothConvenience: BluetoothReceiver {
             if distanceValue == nil { return }
             bhDelegate.updateUI(update: .Distance, value: distanceValue!)
         }
-    }
+    }*/
     
     func connectToDevice(uuid: String) {
         bluetoothKit.startReading(identifier: uuid)

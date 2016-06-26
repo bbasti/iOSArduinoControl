@@ -61,7 +61,7 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
     }
     
     func updateUI(update: UpdateInterface, value: AnyObject) {
-        //TODO implement
+        print("\(update): \(value)")
     }
 
 }
