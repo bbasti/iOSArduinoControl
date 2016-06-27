@@ -16,7 +16,6 @@ class BluetoothConvenience: BluetoothReceiver {
     var peripherals = [String: CBPeripheral]()
     var activePeripheral: CBPeripheral!
     
-    
     init(bhDelegate: BluetoothHelper) {
         self.bhDelegate = bhDelegate
         bluetoothKit.brDelegate = self
