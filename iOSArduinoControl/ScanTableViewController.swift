@@ -16,6 +16,8 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
     static var bConv: BluetoothConvenience!
     static var ardControl: ArdUIController!
     
+    var names = [Int: (String, String)]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ScanTableViewController.bConv = BluetoothConvenience(bhDelegate: self)
@@ -37,8 +39,8 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = nameUpdate
-        cell.detailTextLabel?.text = uuidUpdate
+        cell.textLabel?.text = names[indexPath.row]?.0
+        cell.detailTextLabel?.text = names[indexPath.row]?.1
         return cell
     }
     
@@ -51,9 +53,8 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
     }
     
     func receiveDevice(name: String, uuid: String) {
+        names[counter] = (name, uuid)
         counter += 1
-        nameUpdate = name
-        uuidUpdate = uuid
         self.tableView.reloadData()
     }
     
