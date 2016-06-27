@@ -78,6 +78,10 @@ class BluetoothConvenience: BluetoothReceiver {
     func stepMotor(turns: Int, speed: Int) {
         bluetoothKit.write(data: "step \(turns) \(speed)", uuid: activePeripheral.identifier.uuidString)
     }
+    
+    func customCommand(command: String){
+        bluetoothKit.write(data: command, uuid: activePeripheral.identifier.uuidString)
+    }
 }
 
 enum UpdateInterface {
