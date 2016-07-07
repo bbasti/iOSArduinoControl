@@ -11,8 +11,6 @@ import UIKit
 class ScanTableViewController: UITableViewController, BluetoothHelper {
     
     var counter = 0
-    var nameUpdate: String!
-    var uuidUpdate: String!
     static var bConv: BluetoothConvenience!
     static var ardControl: ArdUIController!
     
