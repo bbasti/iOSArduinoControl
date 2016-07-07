@@ -20,7 +20,9 @@ School project for an Arduino which is going to be controlled via Bluetooth on t
     * Read 
     * Write
 
-HomeKit implementation!!! (ex. Siri turn on the motor)
+### TODO
+ * HomeKit Implementation
+ * Apple Watch
 
 ### Results
 
