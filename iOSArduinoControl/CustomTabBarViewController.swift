@@ -9,8 +9,6 @@
 import UIKit
 import FoldingTabBar
 
-
-//THIS IS JUST THE
 class CustomTabBarViewController: YALFoldingTabBarController {
     
     override func viewDidLoad() {
@@ -22,8 +20,6 @@ class CustomTabBarViewController: YALFoldingTabBarController {
             leftItemImage: nil,
             rightItemImage: nil
         )
-        
-        
         self.leftBarItems = [firstItem!]
         
         //rightBarItems
@@ -32,12 +28,9 @@ class CustomTabBarViewController: YALFoldingTabBarController {
             leftItemImage: nil,
             rightItemImage: nil
         )
-        
-        
         self.rightBarItems = [secondItem!]
         
         self.centerButtonImage = UIImage(named: "plus_icon@2x.png")
-        
         
         self.tabBarView.tabBarColor = UIColor(
             red: 72.0/255.0,
@@ -56,7 +49,6 @@ class CustomTabBarViewController: YALFoldingTabBarController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }

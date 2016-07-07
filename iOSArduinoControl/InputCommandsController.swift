@@ -14,16 +14,14 @@ class InputCommandsController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var textField: UITextView!
     
     var tapGesture = UITapGestureRecognizer()
-    
     var commandsExecuted = ""
     
+    //TODO update interface to make it look more like a ClI (blinking cursor)
     @IBAction func onCommandSent(_ sender: AnyObject) {
         commandsExecuted += "ardCLI# " + commandVal.text! + "\n"
         textField.text = commandsExecuted
         ScanTableViewController.bConv.customCommand(command: commandVal.text!)
-        
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +31,11 @@ class InputCommandsController: UIViewController, UIGestureRecognizerDelegate {
         
         self.view.addGestureRecognizer(tapGesture)
 
-        
         textField.text = ""
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func handleTap(sender: UITapGestureRecognizer? = nil){

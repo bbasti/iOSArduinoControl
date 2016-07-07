@@ -13,7 +13,7 @@ class BluetoothConvenience: BluetoothReceiver {
     let bluetoothKit = BluetoothKit.sharedManager
     let bhDelegate: BluetoothHelper!
     
-    var peripherals = [String: CBPeripheral]()
+    var peripherals = [String: CBPeripheral]() //TODO deprecated
     var activePeripheral: CBPeripheral!
     
     init(bhDelegate: BluetoothHelper) {

@@ -8,7 +8,7 @@
 
 import CoreBluetooth
 
-//TODO implement better error handling
+//TODO remove all other peripheral collections and make this one public
 class BluetoothKit: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     
     static let sharedManager = BluetoothKit()
@@ -28,7 +28,7 @@ class BluetoothKit: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
             manager.scanForPeripherals(withServices: nil, options: nil)
             break
         default:
-            //TODO push error
+            //TODO Implement error handling
             break
         }
     }

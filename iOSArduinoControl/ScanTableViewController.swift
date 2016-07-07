@@ -14,7 +14,7 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
     static var bConv: BluetoothConvenience!
     static var ardControl: ArdUIController!
     
-    var names = [Int: (String, String)]()
+    var names = [Int: (String, String)]() //TODO deprecated
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +24,7 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    // MARK: - Table view data source
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -47,7 +45,6 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
         ardUIController = self.storyboard?.instantiateViewController(withIdentifier: "ArdUIController")
         ScanTableViewController.bConv.connectToDevice(uuid: (tableView.cellForRow(at: indexPath)?.detailTextLabel?.text)!)
         self.present(ardUIController!, animated: true, completion: nil)
-        //self.navigationController?.pushViewController(ArdUIController!, animated: true)
     }
     
     func receiveDevice(name: String, uuid: String) {
@@ -56,7 +53,7 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
         self.tableView.reloadData()
     }
     
-    //TODO popup notification
+    //TODO Implement error handling here
     func handleError(error: String) {
         print(error)
     }
