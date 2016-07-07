@@ -23,6 +23,8 @@ School project for an Arduino which is going to be controlled via Bluetooth on t
 ### TODO
  * HomeKit Implementation
  * Apple Watch
+ * Fix motor slider
+ * Implement better error handling
 
 ### Results
 
