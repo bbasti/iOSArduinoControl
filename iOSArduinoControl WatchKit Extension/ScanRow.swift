@@ -8,8 +8,8 @@
 
 import WatchKit
 
-class ScanRow:NSObject{
+class ScanRow: NSObject {
     @IBOutlet var name: WKInterfaceLabel!
     @IBOutlet var uuid: WKInterfaceLabel!
-    
+
 }

@@ -11,7 +11,7 @@ import Foundation
 import WatchConnectivity
 
 
-class ScanController: WKInterfaceController,WCSessionDelegate {
+class ScanController: WKInterfaceController, WCSessionDelegate {
     
     @IBOutlet var table: WKInterfaceTable!
     var session: WCSession? {
@@ -23,39 +23,35 @@ class ScanController: WKInterfaceController,WCSessionDelegate {
         }
     }
     
-    var devices = [(name:String,uuid:String)]()
+    var devices = [(name:String, uuid:String)]()
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: NSError?) {
         
     }
-
+    
     override func awake(withContext context: AnyObject?) {
         super.awake(withContext: context)
         session = WCSession.default()
         session?.sendMessage(["scan":true], replyHandler: {
             data in
-            self.devices = data.map({($0,$1 as! String)})
-            DispatchQueue.main.async{
+            self.devices = data.map({($0, $1 as! String)})
+            DispatchQueue.main.async {
                 self.table.setNumberOfRows(self.devices.count, withRowType: "ScanRow")
-                for (index, device) in self.devices.enumerated(){
+                for (index, device) in self.devices.enumerated() {
                     let row = self.table.rowController(at: index) as! ScanRow
                     row.name.setText(device.name)
                     row.uuid.setText(device.uuid)
                 }
             }
             }, errorHandler: nil)
-        
-        // Configure interface objects here.
     }
-
+    
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
-
+    
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
 }
