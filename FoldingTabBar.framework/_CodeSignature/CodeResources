@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		J9d+RfoCMsu9PhSEj8b8QNViDnw=
+		</data>
 		<key>Headers/CAAnimation+YALTabBarViewAnimations.h</key>
 		<data>
 		betty4kONQMmgLvvMwUYRbRXoEQ=
@@ -12,13 +16,9 @@
 		<data>
 		7PYxm3PYauq14pNXdVTPRdnnL5w=
 		</data>
-		<key>Headers/FoldingTabBar-umbrella.h</key>
-		<data>
-		GF0Yn4ONSKyKCC0e4N45uc6eUyE=
-		</data>
 		<key>Headers/FoldingTabBar.h</key>
 		<data>
-		JaGjHhrGb1P4K1v9tA8adDtZ2uw=
+		UnbQcFjA6hPN/6n/u8y4BJoL6D8=
 		</data>
 		<key>Headers/YALAnimatingTabBarConstants.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/YALFoldingTabBar.h</key>
 		<data>
-		oCFNJi5iWaTt3EusmnDmMjywtfs=
+		Ef+e4Zum0PqD+H8mfsj73rkqdkk=
 		</data>
 		<key>Headers/YALFoldingTabBarController.h</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bH26DiF1iB1GneCI4kghkp+oW28=
+		wzmdzJ5csMSoyNQm/Gbn3zOggTs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		bPaUw6/X5yFV9mBs1saQamyAVPI=
+		XNFf1tPWMswTCp6Dph/ca140aAg=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -77,26 +77,15 @@
 			L5OplHSnZZA9j9mgpd2Qfu7nQ4zI+/lNIrmGIPyG2FU=
 			</data>
 		</dict>
-		<key>Headers/FoldingTabBar-umbrella.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			GF0Yn4ONSKyKCC0e4N45uc6eUyE=
-			</data>
-			<key>hash2</key>
-			<data>
-			+uM9RO02wF139KKkfUzPaG3o4lhOhXtqhvFqcqZIBxA=
-			</data>
-		</dict>
 		<key>Headers/FoldingTabBar.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JaGjHhrGb1P4K1v9tA8adDtZ2uw=
+			UnbQcFjA6hPN/6n/u8y4BJoL6D8=
 			</data>
 			<key>hash2</key>
 			<data>
-			iUWkb2wtcYGWeRS3PQTOqpVzKTQJkN7IyTTLWWRW+JQ=
+			M+kcaqc3dAWtk78v1cT3cyXu1g3GGH2s3q5myP55iCg=
 			</data>
 		</dict>
 		<key>Headers/YALAnimatingTabBarConstants.h</key>
@@ -125,11 +114,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oCFNJi5iWaTt3EusmnDmMjywtfs=
+			Ef+e4Zum0PqD+H8mfsj73rkqdkk=
 			</data>
 			<key>hash2</key>
 			<data>
-			0u/xAKo+1N8fFBNpx4HHJTzS2r3RNY9YwCS/+HzloGw=
+			sMJ6efQH+DLmFbBLU/A/ARmrlMUAA9KWhwvMIonKvZQ=
 			</data>
 		</dict>
 		<key>Headers/YALFoldingTabBarController.h</key>
@@ -169,11 +158,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bPaUw6/X5yFV9mBs1saQamyAVPI=
+			XNFf1tPWMswTCp6Dph/ca140aAg=
 			</data>
 			<key>hash2</key>
 			<data>
-			pZ4vYLA0RZ/IJ4kHTq6W6o8hEYF7XdcL4vyDtWUZryU=
+			7M6ksz0fKpOzGmVPngVeEJtow3egVJ3sBT3TbY1juFg=
 			</data>
 		</dict>
 	</dict>
@@ -194,6 +183,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^version.plist$</key>
 		<true/>
@@ -239,6 +233,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^Info\.plist$</key>
 		<dict>

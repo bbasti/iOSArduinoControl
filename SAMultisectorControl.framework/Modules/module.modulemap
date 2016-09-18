@@ -1,5 +1,5 @@
 framework module SAMultisectorControl {
-  umbrella header "SAMultisectorControl-umbrella.h"
+  umbrella header "SAMultisectorControl.h"
 
   export *
   module * { export * }

@@ -8,59 +8,52 @@
 
 import CoreBluetooth
 
-class BluetoothConvenience: BluetoothReceiver {
+class BluetoothConvenience: BluetoothRaw {
 
-    let bluetoothKit = BluetoothKit.sharedManager
-    let bhDelegate: BluetoothHelper!
-
-    var peripherals = [String: CBPeripheral]() //TODO deprecated
+    let bluetoothKit = BluetoothKit(service: "FFE0", characteristic: "FFE1")
+    let delegate: BluetoothHelper
+    
     var activePeripheral: CBPeripheral!
 
-    init(bhDelegate: BluetoothHelper) {
-        self.bhDelegate = bhDelegate
-        bluetoothKit.brDelegate = self
+    init(delegate: BluetoothHelper) {
+        self.delegate = delegate
+        bluetoothKit.delegate = self
     }
 
-    func bluetoothManager(didReceiveBroadcastForDevice name: String, uuid: String, peripheral: CBPeripheral) {
-        peripherals[uuid] = peripheral
-        bhDelegate.receiveDevice(name: name, uuid: uuid)
+    func broadcast(for device: String, uuid: String) {
+        delegate.receive(device: device, uuid: uuid)
     }
+    
+    func error(description: String) {
+        delegate.error(description: description)
+    }
+    
+    func received(data: String) {
 
-    func bluetoothManager(didReceiveDataFromDevice data: String) {
-        var potiValue: Int?
-        var distanceValue: Int?
-        var switchState: Bool?
-        var motionState: Bool?
-
-        let dataString = data.replacingOccurrences(of: "\r", with: "")
-        var token: [String]
-
-        if dataString.hasPrefix("switch") {
-            if dataString.hasSuffix("on") { switchState = true } else if dataString.hasSuffix("off") { switchState = false }
-            if switchState == nil { return }
-            bhDelegate.updateUI(update: .Switch(switchState!))
-        } else if dataString.hasPrefix("motion") {
-            if dataString.hasSuffix("on") { motionState = true } else if dataString.hasSuffix("off") { motionState = false }
-            if motionState == nil { return }
-            bhDelegate.updateUI(update: .Motion(motionState!))
-        } else if dataString.hasPrefix("poti") {
-            token = dataString.components(separatedBy: " ")
-            if token.count != 2 { return }
-            potiValue = Int(token[1])
-            if potiValue == nil { return }
-            bhDelegate.updateUI(update: .Poti(potiValue!))
-        } else if dataString.hasPrefix("dist") {
-            token = dataString.components(separatedBy: " ")
-            if token.count != 2 { return }
-            distanceValue = Int(token[1])
-            if distanceValue == nil { return }
-            bhDelegate.updateUI(update: .Distance(distanceValue!))
+        if data.hasPrefix("switch") {
+            delegate.updateUI(update: .Switch(data.hasSuffix("on")))
+        } else if data.hasPrefix("motion") {
+            delegate.updateUI(update: .Motion(data.hasSuffix("on")))
+        } else if data.hasPrefix("poti") {
+            let split = String(describing: data.characters.split(separator: " ").last)
+            guard let raw = Int(split) else {
+                delegate.error(description: "A command was found which didn't conform to guidelines!")
+                return
+            }
+            delegate.updateUI(update: .Poti(raw))
+        } else if data.hasPrefix("dist") {
+            let split = String(describing: data.characters.split(separator: " ").last)
+            guard let raw = Int(split) else {
+                delegate.error(description: "A command was found which didn't conform to guidelines!")
+                return
+            }
+            delegate.updateUI(update: .Distance(raw))
         }
     }
 
     func connectToDevice(uuid: String) {
         bluetoothKit.startReading(identifier: uuid)
-        activePeripheral = peripherals[uuid]
+        activePeripheral = bluetoothKit.peripherals[uuid]?.peripheral
     }
 
     func updateLED(powerState: Bool, brightness: Int) {
@@ -90,7 +83,7 @@ enum UpdateInterface {
 }
 
 protocol BluetoothHelper {
-    func receiveDevice(name: String, uuid: String)
-    func handleError(error: String)
+    func receive(device name: String, uuid: String)
+    func error(description: String)
     func updateUI(update: UpdateInterface)
 }

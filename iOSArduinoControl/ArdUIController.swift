@@ -21,11 +21,10 @@ class ArdUIController: UIViewController {
     @IBOutlet weak var motionSensorVal: UILabel!
     @IBOutlet weak var pmVal: UILabel!
 
-    let blueColor = UIColor(red: 0.0, green:168.0/255.0, blue:255.0/255.0, alpha: 1.0)
-    let greenColor = UIColor(red:29.0/255.0, green:207.0/255.0, blue:0.0, alpha: 1.0)
-
-    let lighRedColor = UIColor(red: 199/255, green: 50/255, blue: 93/255, alpha: 1.0)
-    let lighGreenColor = UIColor(red: 56/255, green: 205/255, blue: 66/255, alpha: 1.0)
+    let blueColor = #colorLiteral(red: 0, green: 0.6588235294, blue: 1, alpha: 1)
+    let lighRedColor = #colorLiteral(red: 0.7803921569, green: 0.1960784314, blue: 0.3647058824, alpha: 1)
+    let greenColor = #colorLiteral(red: 0.1137254902, green: 0.8117647059, blue: 0, alpha: 1)
+    let lighGreenColor = #colorLiteral(red: 0.2196078431, green: 0.8039215686, blue: 0.2588235294, alpha: 1)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +56,7 @@ class ArdUIController: UIViewController {
 
     //For sliders
     @IBAction func onValuesChange(_ sender: SAMultisectorControl) {
-        for sector in self.multisector.sectors {
+        /*for sector in self.multisector.sectors {
 
             let value: Int = Int(sector.endValue - sector.startValue)
 
@@ -69,7 +68,7 @@ class ArdUIController: UIViewController {
             if sector.tag == 1 {
                 ScanTableViewController.bConv.updateLED(powerState: true, brightness: value)
             }
-        }
+        }*/
     }
 
     override func didReceiveMemoryWarning() {

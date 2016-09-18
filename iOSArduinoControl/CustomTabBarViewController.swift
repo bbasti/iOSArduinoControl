@@ -16,7 +16,7 @@ class CustomTabBarViewController: YALFoldingTabBarController {
 
         //leftBarItems
         let firstItem = YALTabBarItem(
-            itemImage: UIImage(named: "Rocket-50w@2x.png")!,
+            itemImage: #imageLiteral(resourceName: "Rocket-w"),
             leftItemImage: nil,
             rightItemImage: nil
         )
@@ -24,13 +24,13 @@ class CustomTabBarViewController: YALFoldingTabBarController {
 
         //rightBarItems
         let secondItem = YALTabBarItem(
-            itemImage: UIImage(named: "Keyboard-50w@2x.png")!,
+            itemImage: #imageLiteral(resourceName: "Keyboard-w"),
             leftItemImage: nil,
             rightItemImage: nil
         )
         self.rightBarItems = [secondItem!]
 
-        self.centerButtonImage = UIImage(named: "plus_icon@2x.png")
+        self.centerButtonImage = #imageLiteral(resourceName: "Plus")
 
         self.tabBarView.tabBarColor = UIColor(
             red: 72.0/255.0,

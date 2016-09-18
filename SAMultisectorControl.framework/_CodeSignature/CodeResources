@@ -4,13 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		7LtcrEaMZkKST2v7lfUzgNNl1ps=
+		</data>
 		<key>Headers/SAMath.h</key>
 		<data>
 		mdm9rZu5gLb+GEE2CO79WNfjjUw=
-		</data>
-		<key>Headers/SAMultisectorControl-umbrella.h</key>
-		<data>
-		9HRc7hNwxa6aWxyQv4W5ikId43Y=
 		</data>
 		<key>Headers/SAMultisectorControl.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VYMNSVzu9EVWweqF31uc3ZZ7lV8=
+		oPsEQ4on7HkTVBgaq0oKSX8lfak=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		bdfeuO10BxRM2tunC6+BiHOhG+M=
+		3lXVzwuqadXwzWnHm3OYFy8hwD0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -36,17 +36,6 @@
 			<key>hash2</key>
 			<data>
 			sCefplZN0EkzTzaRwL5z28dRBo3PKdimBQQoPRY5Ivo=
-			</data>
-		</dict>
-		<key>Headers/SAMultisectorControl-umbrella.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			9HRc7hNwxa6aWxyQv4W5ikId43Y=
-			</data>
-			<key>hash2</key>
-			<data>
-			c+J1E+AGizvDodPNb1zgPaGb3gmEPm/TZUSfJ12UkYI=
 			</data>
 		</dict>
 		<key>Headers/SAMultisectorControl.h</key>
@@ -64,11 +53,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bdfeuO10BxRM2tunC6+BiHOhG+M=
+			3lXVzwuqadXwzWnHm3OYFy8hwD0=
 			</data>
 			<key>hash2</key>
 			<data>
-			karF9XH5lss3077FVwIbfKKZhIDn9oka2RkvUsPALNI=
+			xltvwm3soWKVMY3YOtiZPwu7sAjODD1gZEqkG7HGbwE=
 			</data>
 		</dict>
 	</dict>
@@ -89,6 +78,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^version.plist$</key>
 		<true/>
@@ -134,6 +128,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^Info\.plist$</key>
 		<dict>

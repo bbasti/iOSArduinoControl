@@ -14,11 +14,12 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
     static var bConv: BluetoothConvenience!
     static var ardControl: ArdUIController!
 
+    var ardUIController: UIViewController!
     var names = [Int: (String, String)]() //TODO deprecated
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        ScanTableViewController.bConv = BluetoothConvenience(bhDelegate: self)
+        ScanTableViewController.bConv = BluetoothConvenience(delegate: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,14 +41,21 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
         return cell
     }
 
-    var ardUIController: UIViewController!
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         ardUIController = self.storyboard?.instantiateViewController(withIdentifier: "ArdUIController")
         ScanTableViewController.bConv.connectToDevice(uuid: (tableView.cellForRow(at: indexPath)?.detailTextLabel?.text)!)
         self.present(ardUIController!, animated: true, completion: nil)
     }
 
-    func receiveDevice(name: String, uuid: String) {
+    func receive(device name: String, uuid: String) {
+        
+    }
+    
+    func error(description: String) {
+    
+    }
+
+    /*func receiveDevice(name: String, uuid: String) {
         names[counter] = (name, uuid)
         counter += 1
         self.tableView.reloadData()
@@ -56,7 +64,7 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
     //TODO Implement error handling here
     func handleError(error: String) {
         print(error)
-    }
+    }*/
 
     func updateUI(update: UpdateInterface) {
         ScanTableViewController.ardControl.updateUI(update: update)

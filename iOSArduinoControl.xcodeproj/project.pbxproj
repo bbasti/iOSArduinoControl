@@ -7,134 +7,128 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26181F931D1C777500EEF69E /* FoldingTabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26181F921D1C777400EEF69E /* FoldingTabBar.framework */; };
-		26181F961D1C7C3400EEF69E /* plus_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26181F951D1C7C3400EEF69E /* plus_icon@2x.png */; };
-		26181FA11D1C7DB200EEF69E /* Keyboard-50w@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26181F9F1D1C7DB200EEF69E /* Keyboard-50w@2x.png */; };
-		26181FA21D1C7DB200EEF69E /* Rocket-50w@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26181FA01D1C7DB200EEF69E /* Rocket-50w@2x.png */; };
-		262988A61D1FBCBE00478DDA /* InputCommandsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262988A51D1FBCBE00478DDA /* InputCommandsController.swift */; };
-		262988A81D1FCE6F00478DDA /* ScanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262988A71D1FCE6F00478DDA /* ScanTableViewController.swift */; };
-		266263AD1D1A9F5700B4E99F /* ArdControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 266263AC1D1A9F5700B4E99F /* ArdControlView.xib */; };
-		26A1C1CC1D1C865100A38B1A /* SAMultisectorControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A1C1CB1D1C865100A38B1A /* SAMultisectorControl.framework */; };
-		26A1C1CF1D1C86CE00A38B1A /* ArdUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A1C1CE1D1C86CE00A38B1A /* ArdUIController.swift */; };
-		4D3569FC712B5C2012CCF022 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E396475E560083CEC315F3 /* Pods.framework */; };
-		5999340A1D204C78006CF64E /* ScanRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599934091D204C78006CF64E /* ScanRow.swift */; };
-		DB05CED61CEEE7E100990DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05CED51CEEE7E100990DE4 /* AppDelegate.swift */; };
-		DB05CED81CEEE7E100990DE4 /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05CED71CEEE7E100990DE4 /* CustomTabBarViewController.swift */; };
-		DB05CEDB1CEEE7E100990DE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB05CED91CEEE7E100990DE4 /* Main.storyboard */; };
-		DB05CEDD1CEEE7E100990DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB05CEDC1CEEE7E100990DE4 /* Assets.xcassets */; };
-		DB05CEE01CEEE7E100990DE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB05CEDE1CEEE7E100990DE4 /* LaunchScreen.storyboard */; };
-		DB05CEE51CEEE7E100990DE4 /* iOSArduinoControl WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DB05CEE41CEEE7E100990DE4 /* iOSArduinoControl WatchKit App.app */; };
-		DB05CEEB1CEEE7E100990DE4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB05CEE91CEEE7E100990DE4 /* Interface.storyboard */; };
-		DB05CEED1CEEE7E100990DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB05CEEC1CEEE7E100990DE4 /* Assets.xcassets */; };
-		DB05CEF41CEEE7E100990DE4 /* iOSArduinoControl WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DB05CEF31CEEE7E100990DE4 /* iOSArduinoControl WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		DB05CEFB1CEEE7E100990DE4 /* ScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05CEFA1CEEE7E100990DE4 /* ScanController.swift */; };
-		DB05CEFD1CEEE7E100990DE4 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05CEFC1CEEE7E100990DE4 /* ExtensionDelegate.swift */; };
-		DB05CEFF1CEEE7E100990DE4 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05CEFE1CEEE7E100990DE4 /* NotificationController.swift */; };
-		DB05CF011CEEE7E100990DE4 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05CF001CEEE7E100990DE4 /* GlanceController.swift */; };
-		DB05CF031CEEE7E100990DE4 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05CF021CEEE7E100990DE4 /* ComplicationController.swift */; };
-		DB05CF051CEEE7E100990DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB05CF041CEEE7E100990DE4 /* Assets.xcassets */; };
-		DB293EAC1CF9A9C500A18BCF /* BluetoothKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB293EAB1CF9A9C500A18BCF /* BluetoothKit.swift */; };
-		DB9A60771D200607000ED72C /* FoldingTabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDACB681D20029E007B2CCE /* FoldingTabBar.framework */; };
-		DBDACB691D20029E007B2CCE /* FoldingTabBar.framework in Resources */ = {isa = PBXBuildFile; fileRef = DBDACB681D20029E007B2CCE /* FoldingTabBar.framework */; };
-		DBDACB6B1D2002AB007B2CCE /* SAMultisectorControl.framework in Resources */ = {isa = PBXBuildFile; fileRef = DBDACB6A1D2002AB007B2CCE /* SAMultisectorControl.framework */; };
-		E22E9AE01D069CF600DF38BF /* BluetoothConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E9ADF1D069CF600DF38BF /* BluetoothConvenience.swift */; };
+		DB334E881D8E8B2D00310BFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB334E871D8E8B2D00310BFD /* AppDelegate.swift */; };
+		DB334E8A1D8E8B2D00310BFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB334E891D8E8B2D00310BFD /* ViewController.swift */; };
+		DB334E8F1D8E8B2D00310BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB334E8E1D8E8B2D00310BFD /* Assets.xcassets */; };
+		DB334E921D8E8B2D00310BFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB334E901D8E8B2D00310BFD /* LaunchScreen.storyboard */; };
+		DB334E971D8E8B2D00310BFD /* iOSArduinoControl WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DB334E961D8E8B2D00310BFD /* iOSArduinoControl WatchKit App.app */; };
+		DB334E9D1D8E8B2D00310BFD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB334E9B1D8E8B2D00310BFD /* Interface.storyboard */; };
+		DB334E9F1D8E8B2D00310BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB334E9E1D8E8B2D00310BFD /* Assets.xcassets */; };
+		DB334EA61D8E8B2D00310BFD /* iOSArduinoControl WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DB334EA51D8E8B2D00310BFD /* iOSArduinoControl WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DB334EAD1D8E8B2D00310BFD /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB334EAC1D8E8B2D00310BFD /* InterfaceController.swift */; };
+		DB334EAF1D8E8B2D00310BFD /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB334EAE1D8E8B2D00310BFD /* ExtensionDelegate.swift */; };
+		DB334EB11D8E8B2D00310BFD /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB334EB01D8E8B2D00310BFD /* NotificationController.swift */; };
+		DB334EB31D8E8B2D00310BFD /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB334EB21D8E8B2D00310BFD /* ComplicationController.swift */; };
+		DB334EB51D8E8B2D00310BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB334EB41D8E8B2D00310BFD /* Assets.xcassets */; };
+		DB334EE61D8E8FE200310BFD /* ArdUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB334EE51D8E8FE200310BFD /* ArdUIController.swift */; };
+		DB334EEA1D8E90E200310BFD /* SAMultisectorControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB334EE91D8E90E200310BFD /* SAMultisectorControl.framework */; };
+		DB334EED1D8E919200310BFD /* BluetoothConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB334EEB1D8E919200310BFD /* BluetoothConvenience.swift */; };
+		DB334EEE1D8E919200310BFD /* BluetoothKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB334EEC1D8E919200310BFD /* BluetoothKit.swift */; };
+		DB334EF21D8EAD5300310BFD /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB334EEF1D8EAD5300310BFD /* CustomTabBarViewController.swift */; };
+		DB334EF31D8EAD5300310BFD /* InputCommandsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB334EF01D8EAD5300310BFD /* InputCommandsController.swift */; };
+		DB334EF41D8EAD5300310BFD /* ScanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB334EF11D8EAD5300310BFD /* ScanTableViewController.swift */; };
+		DB334EF61D8EAD7100310BFD /* ArdControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB334EF51D8EAD7100310BFD /* ArdControlView.xib */; };
+		DB334EFA1D8EB06500310BFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB334EF91D8EB06500310BFD /* Main.storyboard */; };
+		DB334F001D8EB2AA00310BFD /* FoldingTabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB334EFF1D8EB2AA00310BFD /* FoldingTabBar.framework */; };
+		DB334F061D8EBAA300310BFD /* SAMultisectorControl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DB334EE91D8E90E200310BFD /* SAMultisectorControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DB334F071D8EBAA800310BFD /* FoldingTabBar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DB334EFF1D8EB2AA00310BFD /* FoldingTabBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DB05CEE61CEEE7E100990DE4 /* PBXContainerItemProxy */ = {
+		DB334E981D8E8B2D00310BFD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DB05CECA1CEEE7E000990DE4 /* Project object */;
+			containerPortal = DB334E7C1D8E8B2D00310BFD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DB05CEE31CEEE7E100990DE4;
+			remoteGlobalIDString = DB334E951D8E8B2D00310BFD;
 			remoteInfo = "iOSArduinoControl WatchKit App";
 		};
-		DB05CEF51CEEE7E100990DE4 /* PBXContainerItemProxy */ = {
+		DB334EA71D8E8B2D00310BFD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DB05CECA1CEEE7E000990DE4 /* Project object */;
+			containerPortal = DB334E7C1D8E8B2D00310BFD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DB05CEF21CEEE7E100990DE4;
+			remoteGlobalIDString = DB334EA41D8E8B2D00310BFD;
 			remoteInfo = "iOSArduinoControl WatchKit Extension";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		DB05CF0C1CEEE7E100990DE4 /* Embed App Extensions */ = {
+		DB334EBC1D8E8B2D00310BFD /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				DB05CEF41CEEE7E100990DE4 /* iOSArduinoControl WatchKit Extension.appex in Embed App Extensions */,
+				DB334EA61D8E8B2D00310BFD /* iOSArduinoControl WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB05CF101CEEE7E100990DE4 /* Embed Watch Content */ = {
+		DB334EC01D8E8B2D00310BFD /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				DB05CEE51CEEE7E100990DE4 /* iOSArduinoControl WatchKit App.app in Embed Watch Content */,
+				DB334E971D8E8B2D00310BFD /* iOSArduinoControl WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB334F051D8EBA9B00310BFD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DB334F071D8EBAA800310BFD /* FoldingTabBar.framework in CopyFiles */,
+				DB334F061D8EBAA300310BFD /* SAMultisectorControl.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		26181F921D1C777400EEF69E /* FoldingTabBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FoldingTabBar.framework; path = "../../Library/Developer/Xcode/DerivedData/iOSArduinoControl-caxvzioersnhulfuglfuyhcuwvtf/Build/Products/Debug-iphonesimulator/FoldingTabBar.framework"; sourceTree = "<group>"; };
-		26181F951D1C7C3400EEF69E /* plus_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus_icon@2x.png"; sourceTree = "<group>"; };
-		26181F9F1D1C7DB200EEF69E /* Keyboard-50w@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Keyboard-50w@2x.png"; sourceTree = "<group>"; };
-		26181FA01D1C7DB200EEF69E /* Rocket-50w@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rocket-50w@2x.png"; sourceTree = "<group>"; };
-		262988A51D1FBCBE00478DDA /* InputCommandsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputCommandsController.swift; sourceTree = "<group>"; };
-		262988A71D1FCE6F00478DDA /* ScanTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanTableViewController.swift; sourceTree = "<group>"; };
-		266263AC1D1A9F5700B4E99F /* ArdControlView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArdControlView.xib; sourceTree = "<group>"; };
-		26A1C1CB1D1C865100A38B1A /* SAMultisectorControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SAMultisectorControl.framework; path = "../../Library/Developer/Xcode/DerivedData/iOSArduinoControl-caxvzioersnhulfuglfuyhcuwvtf/Build/Products/Debug-iphonesimulator/SAMultisectorControl.framework"; sourceTree = "<group>"; };
-		26A1C1CE1D1C86CE00A38B1A /* ArdUIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArdUIController.swift; sourceTree = "<group>"; };
-		31EB58443A5CA85D22C32BD9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		40E396475E560083CEC315F3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		599934091D204C78006CF64E /* ScanRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanRow.swift; sourceTree = "<group>"; };
-		86426DBB408EB8457F4CA347 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		DB05CED21CEEE7E100990DE4 /* iOSArduinoControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSArduinoControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB05CED51CEEE7E100990DE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB05CED71CEEE7E100990DE4 /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
-		DB05CEDA1CEEE7E100990DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DB05CEDC1CEEE7E100990DE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DB05CEDF1CEEE7E100990DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DB05CEE11CEEE7E100990DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB05CEE41CEEE7E100990DE4 /* iOSArduinoControl WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOSArduinoControl WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB05CEEA1CEEE7E100990DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		DB05CEEC1CEEE7E100990DE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DB05CEEE1CEEE7E100990DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB05CEF31CEEE7E100990DE4 /* iOSArduinoControl WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iOSArduinoControl WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB05CEF91CEEE7E100990DE4 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		DB05CEFA1CEEE7E100990DE4 /* ScanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanController.swift; sourceTree = "<group>"; };
-		DB05CEFC1CEEE7E100990DE4 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		DB05CEFE1CEEE7E100990DE4 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		DB05CF001CEEE7E100990DE4 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
-		DB05CF021CEEE7E100990DE4 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		DB05CF041CEEE7E100990DE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DB05CF061CEEE7E100990DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB293EAB1CF9A9C500A18BCF /* BluetoothKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothKit.swift; sourceTree = "<group>"; };
-		DBDACB681D20029E007B2CCE /* FoldingTabBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FoldingTabBar.framework; sourceTree = "<group>"; };
-		DBDACB6A1D2002AB007B2CCE /* SAMultisectorControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAMultisectorControl.framework; sourceTree = "<group>"; };
-		E22E9ADF1D069CF600DF38BF /* BluetoothConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothConvenience.swift; sourceTree = "<group>"; };
+		DB334E841D8E8B2D00310BFD /* iOSArduinoControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSArduinoControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB334E871D8E8B2D00310BFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB334E891D8E8B2D00310BFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DB334E8E1D8E8B2D00310BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB334E911D8E8B2D00310BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB334E931D8E8B2D00310BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB334E961D8E8B2D00310BFD /* iOSArduinoControl WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOSArduinoControl WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB334E9C1D8E8B2D00310BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		DB334E9E1D8E8B2D00310BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB334EA01D8E8B2D00310BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB334EA51D8E8B2D00310BFD /* iOSArduinoControl WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iOSArduinoControl WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB334EAB1D8E8B2D00310BFD /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		DB334EAC1D8E8B2D00310BFD /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		DB334EAE1D8E8B2D00310BFD /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		DB334EB01D8E8B2D00310BFD /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		DB334EB21D8E8B2D00310BFD /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		DB334EB41D8E8B2D00310BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB334EB61D8E8B2D00310BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB334EE51D8E8FE200310BFD /* ArdUIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArdUIController.swift; sourceTree = "<group>"; };
+		DB334EE91D8E90E200310BFD /* SAMultisectorControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAMultisectorControl.framework; sourceTree = "<group>"; };
+		DB334EEB1D8E919200310BFD /* BluetoothConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothConvenience.swift; sourceTree = "<group>"; };
+		DB334EEC1D8E919200310BFD /* BluetoothKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothKit.swift; sourceTree = "<group>"; };
+		DB334EEF1D8EAD5300310BFD /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
+		DB334EF01D8EAD5300310BFD /* InputCommandsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputCommandsController.swift; sourceTree = "<group>"; };
+		DB334EF11D8EAD5300310BFD /* ScanTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanTableViewController.swift; sourceTree = "<group>"; };
+		DB334EF51D8EAD7100310BFD /* ArdControlView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArdControlView.xib; sourceTree = "<group>"; };
+		DB334EF91D8EB06500310BFD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DB334EFF1D8EB2AA00310BFD /* FoldingTabBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FoldingTabBar.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DB05CECF1CEEE7E100990DE4 /* Frameworks */ = {
+		DB334E811D8E8B2D00310BFD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB9A60771D200607000ED72C /* FoldingTabBar.framework in Frameworks */,
-				26A1C1CC1D1C865100A38B1A /* SAMultisectorControl.framework in Frameworks */,
-				26181F931D1C777500EEF69E /* FoldingTabBar.framework in Frameworks */,
-				4D3569FC712B5C2012CCF022 /* Pods.framework in Frameworks */,
+				DB334F001D8EB2AA00310BFD /* FoldingTabBar.framework in Frameworks */,
+				DB334EEA1D8E90E200310BFD /* SAMultisectorControl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB05CEF01CEEE7E100990DE4 /* Frameworks */ = {
+		DB334EA21D8E8B2D00310BFD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -144,171 +138,127 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		26181F8C1D1C754000EEF69E /* images */ = {
+		DB334E7B1D8E8B2D00310BFD = {
 			isa = PBXGroup;
 			children = (
-				26181F8D1D1C755200EEF69E /* tabbaricons */,
-			);
-			name = images;
-			path = "iOSArduinoControl WatchKit App";
-			sourceTree = SOURCE_ROOT;
-		};
-		26181F8D1D1C755200EEF69E /* tabbaricons */ = {
-			isa = PBXGroup;
-			children = (
-				26181F9F1D1C7DB200EEF69E /* Keyboard-50w@2x.png */,
-				26181FA01D1C7DB200EEF69E /* Rocket-50w@2x.png */,
-				26181F951D1C7C3400EEF69E /* plus_icon@2x.png */,
-			);
-			name = tabbaricons;
-			sourceTree = "<group>";
-		};
-		8C6889675E463D77D59A4B57 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				31EB58443A5CA85D22C32BD9 /* Pods.debug.xcconfig */,
-				86426DBB408EB8457F4CA347 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		DB05CEC91CEEE7E000990DE4 = {
-			isa = PBXGroup;
-			children = (
-				DBDACB6A1D2002AB007B2CCE /* SAMultisectorControl.framework */,
-				DBDACB681D20029E007B2CCE /* FoldingTabBar.framework */,
-				DB05CED41CEEE7E100990DE4 /* iOSArduinoControl */,
-				26181F8C1D1C754000EEF69E /* images */,
-				DB05CEE81CEEE7E100990DE4 /* iOSArduinoControl WatchKit App */,
-				DB05CEF71CEEE7E100990DE4 /* iOSArduinoControl WatchKit Extension */,
-				DB05CED31CEEE7E100990DE4 /* Products */,
-				8C6889675E463D77D59A4B57 /* Pods */,
-				E0D5B84A5CB98CAC7D54EA7A /* Frameworks */,
+				DB334EE91D8E90E200310BFD /* SAMultisectorControl.framework */,
+				DB334EFF1D8EB2AA00310BFD /* FoldingTabBar.framework */,
+				DB334E861D8E8B2D00310BFD /* iOSArduinoControl */,
+				DB334E9A1D8E8B2D00310BFD /* iOSArduinoControl WatchKit App */,
+				DB334EA91D8E8B2D00310BFD /* iOSArduinoControl WatchKit Extension */,
+				DB334E851D8E8B2D00310BFD /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DB05CED31CEEE7E100990DE4 /* Products */ = {
+		DB334E851D8E8B2D00310BFD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DB05CED21CEEE7E100990DE4 /* iOSArduinoControl.app */,
-				DB05CEE41CEEE7E100990DE4 /* iOSArduinoControl WatchKit App.app */,
-				DB05CEF31CEEE7E100990DE4 /* iOSArduinoControl WatchKit Extension.appex */,
+				DB334E841D8E8B2D00310BFD /* iOSArduinoControl.app */,
+				DB334E961D8E8B2D00310BFD /* iOSArduinoControl WatchKit App.app */,
+				DB334EA51D8E8B2D00310BFD /* iOSArduinoControl WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DB05CED41CEEE7E100990DE4 /* iOSArduinoControl */ = {
+		DB334E861D8E8B2D00310BFD /* iOSArduinoControl */ = {
 			isa = PBXGroup;
 			children = (
-				DB05CED51CEEE7E100990DE4 /* AppDelegate.swift */,
-				26A1C1CE1D1C86CE00A38B1A /* ArdUIController.swift */,
-				262988A51D1FBCBE00478DDA /* InputCommandsController.swift */,
-				DB293EAB1CF9A9C500A18BCF /* BluetoothKit.swift */,
-				DB05CED71CEEE7E100990DE4 /* CustomTabBarViewController.swift */,
-				DB05CED91CEEE7E100990DE4 /* Main.storyboard */,
-				262988A71D1FCE6F00478DDA /* ScanTableViewController.swift */,
-				DB05CEDC1CEEE7E100990DE4 /* Assets.xcassets */,
-				DB05CEDE1CEEE7E100990DE4 /* LaunchScreen.storyboard */,
-				DB05CEE11CEEE7E100990DE4 /* Info.plist */,
-				E22E9ADF1D069CF600DF38BF /* BluetoothConvenience.swift */,
-				266263AC1D1A9F5700B4E99F /* ArdControlView.xib */,
+				DB334E871D8E8B2D00310BFD /* AppDelegate.swift */,
+				DB334E891D8E8B2D00310BFD /* ViewController.swift */,
+				DB334EE51D8E8FE200310BFD /* ArdUIController.swift */,
+				DB334EEF1D8EAD5300310BFD /* CustomTabBarViewController.swift */,
+				DB334EF01D8EAD5300310BFD /* InputCommandsController.swift */,
+				DB334EF11D8EAD5300310BFD /* ScanTableViewController.swift */,
+				DB334EEB1D8E919200310BFD /* BluetoothConvenience.swift */,
+				DB334EEC1D8E919200310BFD /* BluetoothKit.swift */,
+				DB334EF51D8EAD7100310BFD /* ArdControlView.xib */,
+				DB334EF91D8EB06500310BFD /* Main.storyboard */,
+				DB334E901D8E8B2D00310BFD /* LaunchScreen.storyboard */,
+				DB334E8E1D8E8B2D00310BFD /* Assets.xcassets */,
+				DB334E931D8E8B2D00310BFD /* Info.plist */,
 			);
 			path = iOSArduinoControl;
 			sourceTree = "<group>";
 		};
-		DB05CEE81CEEE7E100990DE4 /* iOSArduinoControl WatchKit App */ = {
+		DB334E9A1D8E8B2D00310BFD /* iOSArduinoControl WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				DB05CEE91CEEE7E100990DE4 /* Interface.storyboard */,
-				DB05CEEC1CEEE7E100990DE4 /* Assets.xcassets */,
-				DB05CEEE1CEEE7E100990DE4 /* Info.plist */,
+				DB334E9B1D8E8B2D00310BFD /* Interface.storyboard */,
+				DB334E9E1D8E8B2D00310BFD /* Assets.xcassets */,
+				DB334EA01D8E8B2D00310BFD /* Info.plist */,
 			);
 			path = "iOSArduinoControl WatchKit App";
 			sourceTree = "<group>";
 		};
-		DB05CEF71CEEE7E100990DE4 /* iOSArduinoControl WatchKit Extension */ = {
+		DB334EA91D8E8B2D00310BFD /* iOSArduinoControl WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				DB05CEFA1CEEE7E100990DE4 /* ScanController.swift */,
-				599934091D204C78006CF64E /* ScanRow.swift */,
-				DB05CEFC1CEEE7E100990DE4 /* ExtensionDelegate.swift */,
-				DB05CEFE1CEEE7E100990DE4 /* NotificationController.swift */,
-				DB05CF001CEEE7E100990DE4 /* GlanceController.swift */,
-				DB05CF021CEEE7E100990DE4 /* ComplicationController.swift */,
-				DB05CF041CEEE7E100990DE4 /* Assets.xcassets */,
-				DB05CF061CEEE7E100990DE4 /* Info.plist */,
-				DB05CEF81CEEE7E100990DE4 /* Supporting Files */,
+				DB334EAC1D8E8B2D00310BFD /* InterfaceController.swift */,
+				DB334EAE1D8E8B2D00310BFD /* ExtensionDelegate.swift */,
+				DB334EB01D8E8B2D00310BFD /* NotificationController.swift */,
+				DB334EB21D8E8B2D00310BFD /* ComplicationController.swift */,
+				DB334EB41D8E8B2D00310BFD /* Assets.xcassets */,
+				DB334EB61D8E8B2D00310BFD /* Info.plist */,
+				DB334EAA1D8E8B2D00310BFD /* Supporting Files */,
 			);
 			path = "iOSArduinoControl WatchKit Extension";
 			sourceTree = "<group>";
 		};
-		DB05CEF81CEEE7E100990DE4 /* Supporting Files */ = {
+		DB334EAA1D8E8B2D00310BFD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DB05CEF91CEEE7E100990DE4 /* PushNotificationPayload.apns */,
+				DB334EAB1D8E8B2D00310BFD /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E0D5B84A5CB98CAC7D54EA7A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				26A1C1CB1D1C865100A38B1A /* SAMultisectorControl.framework */,
-				26181F921D1C777400EEF69E /* FoldingTabBar.framework */,
-				40E396475E560083CEC315F3 /* Pods.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DB05CED11CEEE7E100990DE4 /* iOSArduinoControl */ = {
+		DB334E831D8E8B2D00310BFD /* iOSArduinoControl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB05CF111CEEE7E100990DE4 /* Build configuration list for PBXNativeTarget "iOSArduinoControl" */;
+			buildConfigurationList = DB334EC11D8E8B2D00310BFD /* Build configuration list for PBXNativeTarget "iOSArduinoControl" */;
 			buildPhases = (
-				8E84C3C299A54C045528CBE9 /* Check Pods Manifest.lock */,
-				DB05CECE1CEEE7E100990DE4 /* Sources */,
-				DB05CECF1CEEE7E100990DE4 /* Frameworks */,
-				DB05CED01CEEE7E100990DE4 /* Resources */,
-				DB05CF101CEEE7E100990DE4 /* Embed Watch Content */,
-				0441C76DB302729884291B8B /* Embed Pods Frameworks */,
-				A3BB8B6F3D27ECEA052DB4CB /* Copy Pods Resources */,
+				DB334E801D8E8B2D00310BFD /* Sources */,
+				DB334E811D8E8B2D00310BFD /* Frameworks */,
+				DB334E821D8E8B2D00310BFD /* Resources */,
+				DB334EC01D8E8B2D00310BFD /* Embed Watch Content */,
+				DB334F051D8EBA9B00310BFD /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DB05CEE71CEEE7E100990DE4 /* PBXTargetDependency */,
+				DB334E991D8E8B2D00310BFD /* PBXTargetDependency */,
 			);
 			name = iOSArduinoControl;
 			productName = iOSArduinoControl;
-			productReference = DB05CED21CEEE7E100990DE4 /* iOSArduinoControl.app */;
+			productReference = DB334E841D8E8B2D00310BFD /* iOSArduinoControl.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DB05CEE31CEEE7E100990DE4 /* iOSArduinoControl WatchKit App */ = {
+		DB334E951D8E8B2D00310BFD /* iOSArduinoControl WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB05CF0D1CEEE7E100990DE4 /* Build configuration list for PBXNativeTarget "iOSArduinoControl WatchKit App" */;
+			buildConfigurationList = DB334EBD1D8E8B2D00310BFD /* Build configuration list for PBXNativeTarget "iOSArduinoControl WatchKit App" */;
 			buildPhases = (
-				DB05CEE21CEEE7E100990DE4 /* Resources */,
-				DB05CF0C1CEEE7E100990DE4 /* Embed App Extensions */,
+				DB334E941D8E8B2D00310BFD /* Resources */,
+				DB334EBC1D8E8B2D00310BFD /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DB05CEF61CEEE7E100990DE4 /* PBXTargetDependency */,
+				DB334EA81D8E8B2D00310BFD /* PBXTargetDependency */,
 			);
 			name = "iOSArduinoControl WatchKit App";
 			productName = "iOSArduinoControl WatchKit App";
-			productReference = DB05CEE41CEEE7E100990DE4 /* iOSArduinoControl WatchKit App.app */;
+			productReference = DB334E961D8E8B2D00310BFD /* iOSArduinoControl WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
-		DB05CEF21CEEE7E100990DE4 /* iOSArduinoControl WatchKit Extension */ = {
+		DB334EA41D8E8B2D00310BFD /* iOSArduinoControl WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB05CF091CEEE7E100990DE4 /* Build configuration list for PBXNativeTarget "iOSArduinoControl WatchKit Extension" */;
+			buildConfigurationList = DB334EB91D8E8B2D00310BFD /* Build configuration list for PBXNativeTarget "iOSArduinoControl WatchKit Extension" */;
 			buildPhases = (
-				DB05CEEF1CEEE7E100990DE4 /* Sources */,
-				DB05CEF01CEEE7E100990DE4 /* Frameworks */,
-				DB05CEF11CEEE7E100990DE4 /* Resources */,
+				DB334EA11D8E8B2D00310BFD /* Sources */,
+				DB334EA21D8E8B2D00310BFD /* Frameworks */,
+				DB334EA31D8E8B2D00310BFD /* Resources */,
 			);
 			buildRules = (
 			);
@@ -316,37 +266,37 @@
 			);
 			name = "iOSArduinoControl WatchKit Extension";
 			productName = "iOSArduinoControl WatchKit Extension";
-			productReference = DB05CEF31CEEE7E100990DE4 /* iOSArduinoControl WatchKit Extension.appex */;
+			productReference = DB334EA51D8E8B2D00310BFD /* iOSArduinoControl WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DB05CECA1CEEE7E000990DE4 /* Project object */ = {
+		DB334E7C1D8E8B2D00310BFD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "Philipp Gabriel";
+				ORGANIZATIONNAME = 4AHIT;
 				TargetAttributes = {
-					DB05CED11CEEE7E100990DE4 = {
-						CreatedOnToolsVersion = 7.3;
+					DB334E831D8E8B2D00310BFD = {
+						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = Q5MZT8NG66;
-						DevelopmentTeamName = "Philipp Gabriel (Personal Team)";
-						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
-					DB05CEE31CEEE7E100990DE4 = {
-						CreatedOnToolsVersion = 7.3;
+					DB334E951D8E8B2D00310BFD = {
+						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = Q5MZT8NG66;
+						ProvisioningStyle = Automatic;
 					};
-					DB05CEF21CEEE7E100990DE4 = {
-						CreatedOnToolsVersion = 7.3;
+					DB334EA41D8E8B2D00310BFD = {
+						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = Q5MZT8NG66;
-						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = DB05CECD1CEEE7E000990DE4 /* Build configuration list for PBXProject "iOSArduinoControl" */;
+			buildConfigurationList = DB334E7F1D8E8B2D00310BFD /* Build configuration list for PBXProject "iOSArduinoControl" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -354,166 +304,104 @@
 				en,
 				Base,
 			);
-			mainGroup = DB05CEC91CEEE7E000990DE4;
-			productRefGroup = DB05CED31CEEE7E100990DE4 /* Products */;
+			mainGroup = DB334E7B1D8E8B2D00310BFD;
+			productRefGroup = DB334E851D8E8B2D00310BFD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DB05CED11CEEE7E100990DE4 /* iOSArduinoControl */,
-				DB05CEE31CEEE7E100990DE4 /* iOSArduinoControl WatchKit App */,
-				DB05CEF21CEEE7E100990DE4 /* iOSArduinoControl WatchKit Extension */,
+				DB334E831D8E8B2D00310BFD /* iOSArduinoControl */,
+				DB334E951D8E8B2D00310BFD /* iOSArduinoControl WatchKit App */,
+				DB334EA41D8E8B2D00310BFD /* iOSArduinoControl WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DB05CED01CEEE7E100990DE4 /* Resources */ = {
+		DB334E821D8E8B2D00310BFD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBDACB6B1D2002AB007B2CCE /* SAMultisectorControl.framework in Resources */,
-				DBDACB691D20029E007B2CCE /* FoldingTabBar.framework in Resources */,
-				26181F961D1C7C3400EEF69E /* plus_icon@2x.png in Resources */,
-				DB05CEE01CEEE7E100990DE4 /* LaunchScreen.storyboard in Resources */,
-				DB05CEDD1CEEE7E100990DE4 /* Assets.xcassets in Resources */,
-				266263AD1D1A9F5700B4E99F /* ArdControlView.xib in Resources */,
-				DB05CEDB1CEEE7E100990DE4 /* Main.storyboard in Resources */,
-				26181FA11D1C7DB200EEF69E /* Keyboard-50w@2x.png in Resources */,
-				26181FA21D1C7DB200EEF69E /* Rocket-50w@2x.png in Resources */,
+				DB334E921D8E8B2D00310BFD /* LaunchScreen.storyboard in Resources */,
+				DB334E8F1D8E8B2D00310BFD /* Assets.xcassets in Resources */,
+				DB334EF61D8EAD7100310BFD /* ArdControlView.xib in Resources */,
+				DB334EFA1D8EB06500310BFD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB05CEE21CEEE7E100990DE4 /* Resources */ = {
+		DB334E941D8E8B2D00310BFD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB05CEED1CEEE7E100990DE4 /* Assets.xcassets in Resources */,
-				DB05CEEB1CEEE7E100990DE4 /* Interface.storyboard in Resources */,
+				DB334E9F1D8E8B2D00310BFD /* Assets.xcassets in Resources */,
+				DB334E9D1D8E8B2D00310BFD /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB05CEF11CEEE7E100990DE4 /* Resources */ = {
+		DB334EA31D8E8B2D00310BFD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB05CF051CEEE7E100990DE4 /* Assets.xcassets in Resources */,
+				DB334EB51D8E8B2D00310BFD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0441C76DB302729884291B8B /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8E84C3C299A54C045528CBE9 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		A3BB8B6F3D27ECEA052DB4CB /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		DB05CECE1CEEE7E100990DE4 /* Sources */ = {
+		DB334E801D8E8B2D00310BFD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E22E9AE01D069CF600DF38BF /* BluetoothConvenience.swift in Sources */,
-				DB05CED81CEEE7E100990DE4 /* CustomTabBarViewController.swift in Sources */,
-				DB293EAC1CF9A9C500A18BCF /* BluetoothKit.swift in Sources */,
-				262988A81D1FCE6F00478DDA /* ScanTableViewController.swift in Sources */,
-				26A1C1CF1D1C86CE00A38B1A /* ArdUIController.swift in Sources */,
-				262988A61D1FBCBE00478DDA /* InputCommandsController.swift in Sources */,
-				DB05CED61CEEE7E100990DE4 /* AppDelegate.swift in Sources */,
+				DB334EED1D8E919200310BFD /* BluetoothConvenience.swift in Sources */,
+				DB334EE61D8E8FE200310BFD /* ArdUIController.swift in Sources */,
+				DB334EF21D8EAD5300310BFD /* CustomTabBarViewController.swift in Sources */,
+				DB334E8A1D8E8B2D00310BFD /* ViewController.swift in Sources */,
+				DB334EF41D8EAD5300310BFD /* ScanTableViewController.swift in Sources */,
+				DB334E881D8E8B2D00310BFD /* AppDelegate.swift in Sources */,
+				DB334EEE1D8E919200310BFD /* BluetoothKit.swift in Sources */,
+				DB334EF31D8EAD5300310BFD /* InputCommandsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB05CEEF1CEEE7E100990DE4 /* Sources */ = {
+		DB334EA11D8E8B2D00310BFD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB05CEFF1CEEE7E100990DE4 /* NotificationController.swift in Sources */,
-				5999340A1D204C78006CF64E /* ScanRow.swift in Sources */,
-				DB05CEFD1CEEE7E100990DE4 /* ExtensionDelegate.swift in Sources */,
-				DB05CF031CEEE7E100990DE4 /* ComplicationController.swift in Sources */,
-				DB05CEFB1CEEE7E100990DE4 /* ScanController.swift in Sources */,
-				DB05CF011CEEE7E100990DE4 /* GlanceController.swift in Sources */,
+				DB334EB11D8E8B2D00310BFD /* NotificationController.swift in Sources */,
+				DB334EB31D8E8B2D00310BFD /* ComplicationController.swift in Sources */,
+				DB334EAF1D8E8B2D00310BFD /* ExtensionDelegate.swift in Sources */,
+				DB334EAD1D8E8B2D00310BFD /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DB05CEE71CEEE7E100990DE4 /* PBXTargetDependency */ = {
+		DB334E991D8E8B2D00310BFD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DB05CEE31CEEE7E100990DE4 /* iOSArduinoControl WatchKit App */;
-			targetProxy = DB05CEE61CEEE7E100990DE4 /* PBXContainerItemProxy */;
+			target = DB334E951D8E8B2D00310BFD /* iOSArduinoControl WatchKit App */;
+			targetProxy = DB334E981D8E8B2D00310BFD /* PBXContainerItemProxy */;
 		};
-		DB05CEF61CEEE7E100990DE4 /* PBXTargetDependency */ = {
+		DB334EA81D8E8B2D00310BFD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DB05CEF21CEEE7E100990DE4 /* iOSArduinoControl WatchKit Extension */;
-			targetProxy = DB05CEF51CEEE7E100990DE4 /* PBXContainerItemProxy */;
+			target = DB334EA41D8E8B2D00310BFD /* iOSArduinoControl WatchKit Extension */;
+			targetProxy = DB334EA71D8E8B2D00310BFD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DB05CED91CEEE7E100990DE4 /* Main.storyboard */ = {
+		DB334E901D8E8B2D00310BFD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DB05CEDA1CEEE7E100990DE4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DB05CEDE1CEEE7E100990DE4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB05CEDF1CEEE7E100990DE4 /* Base */,
+				DB334E911D8E8B2D00310BFD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		DB05CEE91CEEE7E100990DE4 /* Interface.storyboard */ = {
+		DB334E9B1D8E8B2D00310BFD /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DB05CEEA1CEEE7E100990DE4 /* Base */,
+				DB334E9C1D8E8B2D00310BFD /* Base */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -521,7 +409,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		DB05CF071CEEE7E100990DE4 /* Debug */ = {
+		DB334EB71D8E8B2D00310BFD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -533,10 +421,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -558,15 +449,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		DB05CF081CEEE7E100990DE4 /* Release */ = {
+		DB334EB81D8E8B2D00310BFD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -578,10 +470,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -597,17 +492,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		DB05CF0A1CEEE7E100990DE4 /* Debug */ = {
+		DB334EBA1D8E8B2D00310BFD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = Q5MZT8NG66;
 				INFOPLIST_FILE = "iOSArduinoControl WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.htlwels.iOSArduinoControl.watchkitapp.watchkitextension;
@@ -616,64 +513,68 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
-		DB05CF0B1CEEE7E100990DE4 /* Release */ = {
+		DB334EBB1D8E8B2D00310BFD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = Q5MZT8NG66;
 				INFOPLIST_FILE = "iOSArduinoControl WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.htlwels.iOSArduinoControl.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
-		DB05CF0E1CEEE7E100990DE4 /* Debug */ = {
+		DB334EBE1D8E8B2D00310BFD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q5MZT8NG66;
 				IBSC_MODULE = iOSArduinoControl_WatchKit_Extension;
 				INFOPLIST_FILE = "iOSArduinoControl WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = at.htlwels.iOSArduinoControl.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
-		DB05CF0F1CEEE7E100990DE4 /* Release */ = {
+		DB334EBF1D8E8B2D00310BFD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q5MZT8NG66;
 				IBSC_MODULE = iOSArduinoControl_WatchKit_Extension;
 				INFOPLIST_FILE = "iOSArduinoControl WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = at.htlwels.iOSArduinoControl.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
-		DB05CF121CEEE7E100990DE4 /* Debug */ = {
+		DB334EC21D8E8B2D00310BFD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31EB58443A5CA85D22C32BD9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q5MZT8NG66;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -686,11 +587,11 @@
 			};
 			name = Debug;
 		};
-		DB05CF131CEEE7E100990DE4 /* Release */ = {
+		DB334EC31D8E8B2D00310BFD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86426DBB408EB8457F4CA347 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q5MZT8NG66;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -699,7 +600,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.htlwels.iOSArduinoControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -707,43 +607,40 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DB05CECD1CEEE7E000990DE4 /* Build configuration list for PBXProject "iOSArduinoControl" */ = {
+		DB334E7F1D8E8B2D00310BFD /* Build configuration list for PBXProject "iOSArduinoControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB05CF071CEEE7E100990DE4 /* Debug */,
-				DB05CF081CEEE7E100990DE4 /* Release */,
+				DB334EB71D8E8B2D00310BFD /* Debug */,
+				DB334EB81D8E8B2D00310BFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DB05CF091CEEE7E100990DE4 /* Build configuration list for PBXNativeTarget "iOSArduinoControl WatchKit Extension" */ = {
+		DB334EB91D8E8B2D00310BFD /* Build configuration list for PBXNativeTarget "iOSArduinoControl WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB05CF0A1CEEE7E100990DE4 /* Debug */,
-				DB05CF0B1CEEE7E100990DE4 /* Release */,
+				DB334EBA1D8E8B2D00310BFD /* Debug */,
+				DB334EBB1D8E8B2D00310BFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		DB05CF0D1CEEE7E100990DE4 /* Build configuration list for PBXNativeTarget "iOSArduinoControl WatchKit App" */ = {
+		DB334EBD1D8E8B2D00310BFD /* Build configuration list for PBXNativeTarget "iOSArduinoControl WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB05CF0E1CEEE7E100990DE4 /* Debug */,
-				DB05CF0F1CEEE7E100990DE4 /* Release */,
+				DB334EBE1D8E8B2D00310BFD /* Debug */,
+				DB334EBF1D8E8B2D00310BFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		DB05CF111CEEE7E100990DE4 /* Build configuration list for PBXNativeTarget "iOSArduinoControl" */ = {
+		DB334EC11D8E8B2D00310BFD /* Build configuration list for PBXNativeTarget "iOSArduinoControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB05CF121CEEE7E100990DE4 /* Debug */,
-				DB05CF131CEEE7E100990DE4 /* Release */,
+				DB334EC21D8E8B2D00310BFD /* Debug */,
+				DB334EC31D8E8B2D00310BFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DB05CECA1CEEE7E000990DE4 /* Project object */;
+	rootObject = DB334E7C1D8E8B2D00310BFD /* Project object */;
 }

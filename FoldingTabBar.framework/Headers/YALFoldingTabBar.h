@@ -32,15 +32,25 @@
 @end
 
 typedef NS_ENUM(NSUInteger, YALTabBarState) {
-    YALStateCollapsed,
-    YALStateExpanded
+    YALTabBarStateCollapsed,
+    YALTabBarStateExpanded
 };
 
 @interface YALFoldingTabBar : UIView
 
 - (instancetype)initWithController:(YALFoldingTabBarController *)controller;
 
-@property (nonatomic, assign, readonly) YALTabBarState state;
+/**
+ *  Default data source is YALFoldingTabBarController.
+ */
+@property (nonatomic, weak) id<YALTabBarDataSource> dataSource;
+
+/**
+ *  Default delegate is YALFoldingTabBarController.
+ */
+@property (nonatomic, weak) id<YALTabBarDelegate> delegate;
+
+@property (nonatomic, assign) YALTabBarState state;
 @property (nonatomic, assign) NSUInteger selectedTabBarItemIndex;
 
 @property (nonatomic, copy) UIColor *tabBarColor;
@@ -49,5 +59,7 @@ typedef NS_ENUM(NSUInteger, YALTabBarState) {
 @property (nonatomic, assign) UIEdgeInsets tabBarItemsEdgeInsets;
 @property (nonatomic, assign) CGFloat extraTabBarItemHeight;
 @property (nonatomic, assign) CGFloat offsetForExtraTabBarItems;
+- (void)changeExtraLeftTabBarItemWithImage:(UIImage *)image;
+- (void)changeExtraRightTabBarItemWithImage:(UIImage *)image;
 
 @end
