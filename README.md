@@ -37,7 +37,7 @@ poti 0..1023
 dist -1..4500
 
 ### Frameworks used
- * iOS and macOS communicate with the Arduino through the CoreBluetooth.framework (to a Bluetooth LE adapter)
- * For Home Automation we used HomeKit.framework (brings also support for Siri)
- * For navigation we used FoldingTabBar.framework
- * For the sliders we used SAMultiselectorControl.framework
+ * iOS and macOS communicate with the Arduino through the **CoreBluetooth.framework** (to a Bluetooth LE adapter)
+ * For Home Automation we used **HomeKit.framework** (brings also support for Siri)
+ * For navigation we used **FoldingTabBar.framework**
+ * For the sliders we used **SAMultiselectorControl.framework**
