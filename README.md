@@ -36,41 +36,8 @@ poti 0..1023
 
 dist -1..4500
 
-### Source control
-
-Either use source control which is directly built into XCode or use the Github.app for committing. You could also use the scripts which were kindly provided by Christoph.
-
-Usage:
-
-```sh
-$ ./push commitMessage
-```
-```sh
-$ ./pull
-```
-
-### Usage of BluetoothKit class
-
-First you need to conform to the BluetoothReceiver protocol
-
-```swift
-class BastisClass: BluetoothReceiver {
-
-//Store all those CBPeripherals somewhere in a list and call the connect(peripheral) when someone clicked on it in a ListView
-func bluetoothManager(didReceiveBroadcastForDevice name: String, uuid: String, peripheral: CBPeripheral) //This is being called when a new device was discovered
-func bluetoothManager(didReceiveDataFromDevice data: String) //This will be called as soon as the device is connected with the data as parameter
-}
-```
-
-Now the usage:
-```swift
-let bluetoothKit = BluetoothKit.sharedManager
-bluetoothKit.brDelegate = self
-
-//broadcastManager will be called everytime I found a new device after startScan() was called
-bluetoothKit.startScan() //Returns false if brDelegate was not set or timeout was hit
-bluetoothKit.stopScan()
-
-bluetoothKit.startReading("uuid-of-hells-device") //stopScan() is being called here, no need to call it again
-bluetoothKit.write("help", "uuid-of-hells-device")
-```
+### Frameworks used
+ * iOS and macOS communicate with the Arduino through the CoreBluetooth.framework (to a Bluetooth LE adapter)
+ * For Home Automation we used HomeKit.framework (brings also support for Siri)
+ * For navigation we used FoldingTabBar.framework
+ * For the sliders we used SAMultiselectorControl.framework
