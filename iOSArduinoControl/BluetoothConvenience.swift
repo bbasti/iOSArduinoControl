@@ -10,16 +10,23 @@ import CoreBluetooth
 
 class BluetoothConvenience: BluetoothRaw {
 
-    let bluetoothKit = BluetoothKit(service: "FFE0", characteristic: "FFE1")
     let delegate: BluetoothHelper
-    
+    var bluetoothKit: BluetoothKit!
     var activePeripheral: CBPeripheral!
 
     init(delegate: BluetoothHelper) {
         self.delegate = delegate
-        bluetoothKit.delegate = self
+        
+        defer {
+            self.bluetoothKit = BluetoothKit(service: "FFE0", characteristic: "FFE1", delegate: self)
+            bluetoothKit.startScan()
+        }
     }
 
+    func connected() {
+        delegate.connected()
+    }
+    
     func broadcast(for device: String, uuid: String) {
         delegate.receive(device: device, uuid: uuid)
     }
@@ -83,6 +90,7 @@ enum UpdateInterface {
 }
 
 protocol BluetoothHelper {
+    func connected()
     func receive(device name: String, uuid: String)
     func error(description: String)
     func updateUI(update: UpdateInterface)

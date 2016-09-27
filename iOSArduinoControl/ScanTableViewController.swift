@@ -54,6 +54,10 @@ class ScanTableViewController: UITableViewController, BluetoothHelper {
     func error(description: String) {
     
     }
+    
+    func connected() {
+        
+    }
 
     /*func receiveDevice(name: String, uuid: String) {
         names[counter] = (name, uuid)

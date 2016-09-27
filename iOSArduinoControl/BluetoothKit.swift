@@ -12,25 +12,27 @@ class BluetoothKit: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     
     let service: String
     let characteristic: String
+    var delegate: BluetoothRaw
     
-    var delegate: BluetoothRaw?
     var peripherals = [String: (peripheral: CBPeripheral, characteristic: CBCharacteristic?)]()
     private var manager: CBCentralManager!
     
-    init(service: String, characteristic: String) {
+    init(service: String, characteristic: String, delegate: BluetoothRaw) {
         self.service = service
         self.characteristic = characteristic
+        self.delegate = delegate
         super.init()
-        manager = CBCentralManager(delegate: self, queue: nil)
     }
 
+    //MARK - CBCentralManager
+    
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
         case .poweredOn:
             manager.scanForPeripherals(withServices: nil, options: nil)
             break
         default:
-            delegate?.error(description: "Bluetooth returned with status: " + String(central.state.rawValue))
+            delegate.error(description: "Bluetooth returned with status: " + String(central.state.rawValue))
             break
         }
     }
@@ -39,22 +41,24 @@ class BluetoothKit: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         guard let name = peripheral.name else { return }
         peripheral.delegate = self
         peripherals[peripheral.identifier.uuidString] = (peripheral, nil)
-        delegate?.broadcast(for: name, uuid: peripheral.identifier.uuidString)
+        delegate.broadcast(for: name, uuid: peripheral.identifier.uuidString)
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         peripheral.discoverServices(nil)
     }
 
+    //MARK - CBPeripheral
+    
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         
         if error != nil {
-            delegate?.error(description: error.debugDescription)
+            delegate.error(description: error.debugDescription)
             return
         }
         
         guard let services = peripheral.services else {
-            delegate?.error(description: "No services for this device were found!")
+            delegate.error(description: "No services for this device were found!")
             return
         }
         
@@ -63,7 +67,7 @@ class BluetoothKit: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         }
         
         guard let unwrapped = result else {
-            delegate?.error(description: "No fitting services found for this device!")
+            delegate.error(description: "No fitting services found for this device!")
             return
         }
         
@@ -73,12 +77,12 @@ class BluetoothKit: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         
         if error != nil {
-            delegate?.error(description: error.debugDescription)
+            delegate.error(description: error.debugDescription)
             return
         }
         
         guard let characteristics = service.characteristics else {
-            delegate?.error(description: "No characteristics for this device were found!")
+            delegate.error(description: "No characteristics for this device were found!")
             return
         }
         
@@ -87,30 +91,37 @@ class BluetoothKit: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         }
         
         guard let unwrapped = result else {
-            delegate?.error(description: "No fitting characteristics found for this device!")
+            delegate.error(description: "No fitting characteristics found for this device!")
             return
         }
         let id = peripheral.identifier.uuidString
         peripherals[id] = ((peripherals[id]?.peripheral)!, unwrapped)
+        delegate.connected()
         peripheral.setNotifyValue(true, for: unwrapped)
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         
         if error != nil {
-            delegate?.error(description: error.debugDescription)
+            delegate.error(description: error.debugDescription)
             return
         }
         
         guard let data = characteristic.value else {
-            delegate?.error(description: "Received data with no context!")
+            delegate.error(description: "Received data with no context!")
             return
         }
         
         let strings = String(data: data, encoding: String.Encoding.utf8)!.components(separatedBy: "\r\n")
         for string in strings {
-            delegate?.received(data: string)
+            delegate.received(data: string)
         }
+    }
+    
+    //MARK - Own functions
+    
+    func startScan() {
+        manager = CBCentralManager(delegate: self, queue: nil)
     }
     
     func startReading(identifier: String) {
@@ -120,12 +131,12 @@ class BluetoothKit: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
 
     func write(data: String, uuid: String) {
         guard let raw = (data + "\r\n").data(using: String.Encoding.utf8) else {
-            delegate?.error(description: "Could not convert data to UTF8!")
+            delegate.error(description: "Could not convert data to UTF8!")
             return
         }
         
         guard let characteristic = peripherals[uuid]?.characteristic else {
-            delegate?.error(description: "No characteristics were found for this device!")
+            delegate.error(description: "No characteristics were found for this device!")
             return
         }
         
@@ -135,6 +146,7 @@ class BluetoothKit: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
 }
 
 protocol BluetoothRaw {
+    func connected()
     func broadcast(for device: String, uuid: String)
     func received(data: String)
     func error(description: String)
